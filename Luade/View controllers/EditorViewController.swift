@@ -247,7 +247,6 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
         
         r = textView.convert(r, from:nil)
         textView.contentInset.bottom = r.size.height
-        setTextViewContentInset()
         textView.contentTextView.scrollIndicatorInsets.bottom = r.size.height
     }
     
