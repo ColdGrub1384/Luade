@@ -7,21 +7,236 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
+		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
+		C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */; };
+		C9A23F0421AF14A600DA10D1 /* LuaDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */; };
 		C9BC6D4421AB2911006CB876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4321AB2911006CB876 /* AppDelegate.swift */; };
-		C9BC6D4621AB2911006CB876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4521AB2911006CB876 /* ViewController.swift */; };
-		C9BC6D4921AB2911006CB876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D4721AB2911006CB876 /* Main.storyboard */; };
 		C9BC6D4B21AB2913006CB876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D4A21AB2913006CB876 /* Assets.xcassets */; };
 		C9BC6D4E21AB2913006CB876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D4C21AB2913006CB876 /* LaunchScreen.storyboard */; };
+		C9BC6D6B21AB2E30006CB876 /* commandDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */; };
+		C9BC6DCA21AB3D6C006CB876 /* lbitlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8D21AB3D62006CB876 /* lbitlib.c */; };
+		C9BC6DCB21AB3D6C006CB876 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8E21AB3D62006CB876 /* liolib.c */; };
+		C9BC6DCC21AB3D6C006CB876 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8F21AB3D62006CB876 /* lapi.c */; };
+		C9BC6DCD21AB3D6C006CB876 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9221AB3D62006CB876 /* loslib.c */; };
+		C9BC6DCE21AB3D6C006CB876 /* lua.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9321AB3D63006CB876 /* lua.c */; };
+		C9BC6DCF21AB3D6C006CB876 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9421AB3D63006CB876 /* ltablib.c */; };
+		C9BC6DD021AB3D6C006CB876 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9521AB3D63006CB876 /* lfunc.c */; };
+		C9BC6DD121AB3D6C006CB876 /* lutf8lib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9821AB3D63006CB876 /* lutf8lib.c */; };
+		C9BC6DD221AB3D6C006CB876 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9C21AB3D64006CB876 /* lzio.c */; };
+		C9BC6DD321AB3D6C006CB876 /* lcorolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9D21AB3D64006CB876 /* lcorolib.c */; };
+		C9BC6DD421AB3D6C006CB876 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9F21AB3D64006CB876 /* lstring.c */; };
+		C9BC6DD521AB3D6C006CB876 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA021AB3D64006CB876 /* lvm.c */; };
+		C9BC6DD621AB3D6C006CB876 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA221AB3D65006CB876 /* lstate.c */; };
+		C9BC6DD721AB3D6C006CB876 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA721AB3D65006CB876 /* llex.c */; };
+		C9BC6DD821AB3D6C006CB876 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA921AB3D66006CB876 /* lparser.c */; };
+		C9BC6DD921AB3D6C006CB876 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DAA21AB3D66006CB876 /* lgc.c */; };
+		C9BC6DDA21AB3D6C006CB876 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DAE21AB3D66006CB876 /* loadlib.c */; };
+		C9BC6DDB21AB3D6C006CB876 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB021AB3D67006CB876 /* lmem.c */; };
+		C9BC6DDC21AB3D6C006CB876 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB121AB3D67006CB876 /* lobject.c */; };
+		C9BC6DDD21AB3D6C006CB876 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB221AB3D67006CB876 /* lauxlib.c */; };
+		C9BC6DDE21AB3D6C006CB876 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB421AB3D68006CB876 /* ltm.c */; };
+		C9BC6DDF21AB3D6C006CB876 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB721AB3D68006CB876 /* ldump.c */; };
+		C9BC6DE021AB3D6C006CB876 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB821AB3D69006CB876 /* lbaselib.c */; };
+		C9BC6DE121AB3D6C006CB876 /* lctype.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB921AB3D69006CB876 /* lctype.c */; };
+		C9BC6DE221AB3D6C006CB876 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBA21AB3D69006CB876 /* lstrlib.c */; };
+		C9BC6DE321AB3D6C006CB876 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBB21AB3D69006CB876 /* ltable.c */; };
+		C9BC6DE421AB3D6C006CB876 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBD21AB3D6A006CB876 /* linit.c */; };
+		C9BC6DE521AB3D6C006CB876 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBE21AB3D6A006CB876 /* lopcodes.c */; };
+		C9BC6DE621AB3D6C006CB876 /* ltests.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC021AB3D6A006CB876 /* ltests.c */; };
+		C9BC6DE721AB3D6C006CB876 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC121AB3D6A006CB876 /* ldebug.c */; };
+		C9BC6DE821AB3D6C006CB876 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC521AB3D6B006CB876 /* ldblib.c */; };
+		C9BC6DE921AB3D6C006CB876 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC621AB3D6B006CB876 /* lundump.c */; };
+		C9BC6DEA21AB3D6C006CB876 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC721AB3D6C006CB876 /* lmathlib.c */; };
+		C9BC6DEB21AB3D6C006CB876 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC821AB3D6C006CB876 /* lcode.c */; };
+		C9BC6DEC21AB3D6C006CB876 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC921AB3D6C006CB876 /* ldo.c */; };
+		C9BC6DF921AB4591006CB876 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BC6D5A21AB2A22006CB876 /* ios_system.framework */; };
+		C9BC6DFA21AB4591006CB876 /* ios_system.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BC6D5A21AB2A22006CB876 /* ios_system.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BC6DFF21AB4EFB006CB876 /* Untitled.lua in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6DFE21AB4EFB006CB876 /* Untitled.lua */; };
+		C9BC6E0121AB5805006CB876 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0021AB5804006CB876 /* ConsoleViewController.swift */; };
+		C9BC6E0321AB5829006CB876 /* ConsoleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0221AB5829006CB876 /* ConsoleTextView.swift */; };
+		C9BC6E0521AB585D006CB876 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0421AB585D006CB876 /* UIWindow.swift */; };
+		C9BC6E0721AB5A21006CB876 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0621AB5A21006CB876 /* IO.swift */; };
+		C9EA90AB21ADE25A00F87F66 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */; };
+		C9EA90AD21ADE28A00F87F66 /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */; };
+		C9EA90AF21ADE29600F87F66 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EA90AE21ADE29600F87F66 /* Localizable.strings */; };
+		C9EA90C421ADE67C00F87F66 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90C021ADE67C00F87F66 /* Localizable.swift */; };
+		C9EA90C721ADE8C700F87F66 /* lua_copyright.c in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90C621ADE8C700F87F66 /* lua_copyright.c */; };
+		C9EA90CA21ADEBF300F87F66 /* Lua.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90C921ADEBF300F87F66 /* Lua.swift */; };
+		C9EA90CC21ADECDD00F87F66 /* LuaDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90CB21ADECDD00F87F66 /* LuaDocument.swift */; };
+		C9EA90CE21ADED1300F87F66 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90CD21ADED1300F87F66 /* EditorViewController.swift */; };
+		C9EA90D021ADF00700F87F66 /* RelativePathForScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90CF21ADF00600F87F66 /* RelativePathForScript.swift */; };
+		C9EA90D221ADF07F00F87F66 /* UITextView+currentWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D121ADF07F00F87F66 /* UITextView+currentWord.swift */; };
+		C9EA90D421ADF0A800F87F66 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D321ADF0A700F87F66 /* String.swift */; };
+		C9EA90D821ADF3E200F87F66 /* LuaLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D721ADF3E200F87F66 /* LuaLexer.swift */; };
+		DC1F88E10FE5055CA5EAB5A4 /* Pods_Luade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4E40A86137E78995F777A0 /* Pods_Luade.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C9A0966821AE134D00A03454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA115E90226A8EF5AC07DC59492C77D;
+			remoteInfo = FloatingPanel;
+		};
+		C9A0966A21AE134D00A03454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46F5536D008CB954DB43DF858C84A600;
+			remoteInfo = InputAssistant;
+		};
+		C9BC6D5921AB2A22006CB876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 223496AB1FD5FC71007ED1A9;
+			remoteInfo = ios_system;
+		};
+		C9BC6DFB21AB4591006CB876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 223496AA1FD5FC71007ED1A9;
+			remoteInfo = ios_system;
+		};
+		C9EA90B821ADE5E800F87F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8EF36B1559613BF9D9C5F2B5B6C28FA8;
+			remoteInfo = "Pods-Luade";
+		};
+		C9EA90BA21ADE5E800F87F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70B6D2CAFFB796B348D4CACAB671A70;
+			remoteInfo = SavannaKit;
+		};
+		C9EA90BC21ADE5E800F87F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE81415DD4BC7D24A37E817C0246B0C1;
+			remoteInfo = SourceEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9BC6D6521AB2B1A006CB876 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9BC6DFA21AB4591006CB876 /* ios_system.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4CAB930C80137560BA7C1F4A /* Pods-Luade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luade.release.xcconfig"; path = "Pods/Target Support Files/Pods-Luade/Pods-Luade.release.xcconfig"; sourceTree = "<group>"; };
+		BD4E40A86137E78995F777A0 /* Pods_Luade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
+		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
+		C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaDelegate.swift; sourceTree = "<group>"; };
 		C9BC6D4021AB2911006CB876 /* Luade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BC6D4321AB2911006CB876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9BC6D4521AB2911006CB876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9BC6D4821AB2911006CB876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9BC6D4A21AB2913006CB876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9BC6D4D21AB2913006CB876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9BC6D4F21AB2913006CB876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ios_system.xcodeproj; path = ios_system/ios_system.xcodeproj; sourceTree = "<group>"; };
+		C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = commandDictionary.plist; sourceTree = "<group>"; };
+		C9BC6D8B21AB3D60006CB876 /* Luade-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Luade-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9BC6D8C21AB3D62006CB876 /* ldebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ldebug.h; sourceTree = "<group>"; };
+		C9BC6D8D21AB3D62006CB876 /* lbitlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbitlib.c; sourceTree = "<group>"; };
+		C9BC6D8E21AB3D62006CB876 /* liolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = liolib.c; sourceTree = "<group>"; };
+		C9BC6D8F21AB3D62006CB876 /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
+		C9BC6D9021AB3D62006CB876 /* lprefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lprefix.h; sourceTree = "<group>"; };
+		C9BC6D9121AB3D62006CB876 /* llimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llimits.h; sourceTree = "<group>"; };
+		C9BC6D9221AB3D62006CB876 /* loslib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loslib.c; sourceTree = "<group>"; };
+		C9BC6D9321AB3D63006CB876 /* lua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua.c; sourceTree = "<group>"; };
+		C9BC6D9421AB3D63006CB876 /* ltablib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltablib.c; sourceTree = "<group>"; };
+		C9BC6D9521AB3D63006CB876 /* lfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfunc.c; sourceTree = "<group>"; };
+		C9BC6D9621AB3D63006CB876 /* llex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llex.h; sourceTree = "<group>"; };
+		C9BC6D9721AB3D63006CB876 /* lopcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lopcodes.h; sourceTree = "<group>"; };
+		C9BC6D9821AB3D63006CB876 /* lutf8lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lutf8lib.c; sourceTree = "<group>"; };
+		C9BC6D9921AB3D63006CB876 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		C9BC6D9A21AB3D63006CB876 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lstate.h; sourceTree = "<group>"; };
+		C9BC6D9B21AB3D64006CB876 /* ltests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltests.h; sourceTree = "<group>"; };
+		C9BC6D9C21AB3D64006CB876 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
+		C9BC6D9D21AB3D64006CB876 /* lcorolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lcorolib.c; sourceTree = "<group>"; };
+		C9BC6D9E21AB3D64006CB876 /* lmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lmem.h; sourceTree = "<group>"; };
+		C9BC6D9F21AB3D64006CB876 /* lstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstring.c; sourceTree = "<group>"; };
+		C9BC6DA021AB3D64006CB876 /* lvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lvm.c; sourceTree = "<group>"; };
+		C9BC6DA121AB3D64006CB876 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lapi.h; sourceTree = "<group>"; };
+		C9BC6DA221AB3D65006CB876 /* lstate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstate.c; sourceTree = "<group>"; };
+		C9BC6DA321AB3D65006CB876 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		C9BC6DA421AB3D65006CB876 /* lfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfunc.h; sourceTree = "<group>"; };
+		C9BC6DA521AB3D65006CB876 /* ltm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltm.h; sourceTree = "<group>"; };
+		C9BC6DA621AB3D65006CB876 /* lobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lobject.h; sourceTree = "<group>"; };
+		C9BC6DA721AB3D65006CB876 /* llex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = llex.c; sourceTree = "<group>"; };
+		C9BC6DA821AB3D65006CB876 /* ltable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltable.h; sourceTree = "<group>"; };
+		C9BC6DA921AB3D66006CB876 /* lparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lparser.c; sourceTree = "<group>"; };
+		C9BC6DAA21AB3D66006CB876 /* lgc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
+		C9BC6DAB21AB3D66006CB876 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		C9BC6DAC21AB3D66006CB876 /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lundump.h; sourceTree = "<group>"; };
+		C9BC6DAD21AB3D66006CB876 /* lstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lstring.h; sourceTree = "<group>"; };
+		C9BC6DAE21AB3D66006CB876 /* loadlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loadlib.c; sourceTree = "<group>"; };
+		C9BC6DAF21AB3D66006CB876 /* lgc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lgc.h; sourceTree = "<group>"; };
+		C9BC6DB021AB3D67006CB876 /* lmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
+		C9BC6DB121AB3D67006CB876 /* lobject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lobject.c; sourceTree = "<group>"; };
+		C9BC6DB221AB3D67006CB876 /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
+		C9BC6DB321AB3D67006CB876 /* ldo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ldo.h; sourceTree = "<group>"; };
+		C9BC6DB421AB3D68006CB876 /* ltm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltm.c; sourceTree = "<group>"; };
+		C9BC6DB521AB3D68006CB876 /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzio.h; sourceTree = "<group>"; };
+		C9BC6DB621AB3D68006CB876 /* lctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lctype.h; sourceTree = "<group>"; };
+		C9BC6DB721AB3D68006CB876 /* ldump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldump.c; sourceTree = "<group>"; };
+		C9BC6DB821AB3D69006CB876 /* lbaselib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbaselib.c; sourceTree = "<group>"; };
+		C9BC6DB921AB3D69006CB876 /* lctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lctype.c; sourceTree = "<group>"; };
+		C9BC6DBA21AB3D69006CB876 /* lstrlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstrlib.c; sourceTree = "<group>"; };
+		C9BC6DBB21AB3D69006CB876 /* ltable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltable.c; sourceTree = "<group>"; };
+		C9BC6DBC21AB3D69006CB876 /* lcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcode.h; sourceTree = "<group>"; };
+		C9BC6DBD21AB3D6A006CB876 /* linit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linit.c; sourceTree = "<group>"; };
+		C9BC6DBE21AB3D6A006CB876 /* lopcodes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lopcodes.c; sourceTree = "<group>"; };
+		C9BC6DBF21AB3D6A006CB876 /* lparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lparser.h; sourceTree = "<group>"; };
+		C9BC6DC021AB3D6A006CB876 /* ltests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltests.c; sourceTree = "<group>"; };
+		C9BC6DC121AB3D6A006CB876 /* ldebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldebug.c; sourceTree = "<group>"; };
+		C9BC6DC221AB3D6B006CB876 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		C9BC6DC321AB3D6B006CB876 /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lvm.h; sourceTree = "<group>"; };
+		C9BC6DC421AB3D6B006CB876 /* ljumptab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ljumptab.h; sourceTree = "<group>"; };
+		C9BC6DC521AB3D6B006CB876 /* ldblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldblib.c; sourceTree = "<group>"; };
+		C9BC6DC621AB3D6B006CB876 /* lundump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lundump.c; sourceTree = "<group>"; };
+		C9BC6DC721AB3D6C006CB876 /* lmathlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lmathlib.c; sourceTree = "<group>"; };
+		C9BC6DC821AB3D6C006CB876 /* lcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lcode.c; sourceTree = "<group>"; };
+		C9BC6DC921AB3D6C006CB876 /* ldo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
+		C9BC6DF121AB3E56006CB876 /* ios_error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_error.h; sourceTree = "<group>"; };
+		C9BC6DF321AB3EE1006CB876 /* ios_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ios_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BC6DFE21AB4EFB006CB876 /* Untitled.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = Untitled.lua; sourceTree = "<group>"; };
+		C9BC6E0021AB5804006CB876 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
+		C9BC6E0221AB5829006CB876 /* ConsoleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleTextView.swift; sourceTree = "<group>"; };
+		C9BC6E0421AB585D006CB876 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		C9BC6E0621AB5A21006CB876 /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
+		C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
+		C9EA90AE21ADE29600F87F66 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		C9EA90C021ADE67C00F87F66 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		C9EA90C521ADE8C700F87F66 /* lua_copyright.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lua_copyright.h; sourceTree = "<group>"; };
+		C9EA90C621ADE8C700F87F66 /* lua_copyright.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lua_copyright.c; sourceTree = "<group>"; };
+		C9EA90C921ADEBF300F87F66 /* Lua.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lua.swift; sourceTree = "<group>"; };
+		C9EA90CB21ADECDD00F87F66 /* LuaDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuaDocument.swift; sourceTree = "<group>"; };
+		C9EA90CD21ADED1300F87F66 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		C9EA90CF21ADF00600F87F66 /* RelativePathForScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativePathForScript.swift; sourceTree = "<group>"; };
+		C9EA90D121ADF07F00F87F66 /* UITextView+currentWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+currentWord.swift"; sourceTree = "<group>"; };
+		C9EA90D321ADF0A700F87F66 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C9EA90D721ADF3E200F87F66 /* LuaLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaLexer.swift; sourceTree = "<group>"; };
+		F70489BA28CB49B0B7A5DA68 /* Pods-Luade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Luade/Pods-Luade.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +244,89 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BC6DF921AB4591006CB876 /* ios_system.framework in Frameworks */,
+				DC1F88E10FE5055CA5EAB5A4 /* Pods_Luade.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56DE6EE1FD34334449B256A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F70489BA28CB49B0B7A5DA68 /* Pods-Luade.debug.xcconfig */,
+				4CAB930C80137560BA7C1F4A /* Pods-Luade.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9647FB221AB6D93005765C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC6D4A21AB2913006CB876 /* Assets.xcassets */,
+				C9647FB021AB6CC9005765C2 /* Main.storyboard */,
+				C9BC6D4C21AB2913006CB876 /* LaunchScreen.storyboard */,
+				C9BC6D4F21AB2913006CB876 /* Info.plist */,
+				C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */,
+				C9BC6DFE21AB4EFB006CB876 /* Untitled.lua */,
+				C9EA90AE21ADE29600F87F66 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C9647FB321AB6DAB005765C2 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */,
+				C9EA90CD21ADED1300F87F66 /* EditorViewController.swift */,
+				C9BC6E0021AB5804006CB876 /* ConsoleViewController.swift */,
+				C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		C9647FB421AB6DBC005765C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC6E0621AB5A21006CB876 /* IO.swift */,
+				C9EA90C021ADE67C00F87F66 /* Localizable.swift */,
+				C9EA90CB21ADECDD00F87F66 /* LuaDocument.swift */,
+				C9EA90D721ADF3E200F87F66 /* LuaLexer.swift */,
+				C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */,
+				C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9647FB521AB6DCB005765C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */,
+				C9BC6E0221AB5829006CB876 /* ConsoleTextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9647FB721AB6DD8005765C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9EA90D121ADF07F00F87F66 /* UITextView+currentWord.swift */,
+				C9BC6E0421AB585D006CB876 /* UIWindow.swift */,
+				C9EA90D321ADF0A700F87F66 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C9BC6D3721AB2911006CB876 = {
 			isa = PBXGroup;
 			children = (
+				C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */,
+				C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */,
 				C9BC6D4221AB2911006CB876 /* Luade */,
 				C9BC6D4121AB2911006CB876 /* Products */,
+				C9BC6DF221AB3EE1006CB876 /* Frameworks */,
+				56DE6EE1FD34334449B256A2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +341,127 @@
 		C9BC6D4221AB2911006CB876 /* Luade */ = {
 			isa = PBXGroup;
 			children = (
-				C9BC6D4321AB2911006CB876 /* AppDelegate.swift */,
-				C9BC6D4521AB2911006CB876 /* ViewController.swift */,
-				C9BC6D4721AB2911006CB876 /* Main.storyboard */,
-				C9BC6D4A21AB2913006CB876 /* Assets.xcassets */,
-				C9BC6D4C21AB2913006CB876 /* LaunchScreen.storyboard */,
-				C9BC6D4F21AB2913006CB876 /* Info.plist */,
+				C9BC6D8A21AB3D42006CB876 /* lua */,
+				C9BC6D8B21AB3D60006CB876 /* Luade-Bridging-Header.h */,
+				C9EA90C521ADE8C700F87F66 /* lua_copyright.h */,
+				C9EA90C621ADE8C700F87F66 /* lua_copyright.c */,
+				C9EA90C821ADEBE900F87F66 /* Singletons */,
+				C9647FB321AB6DAB005765C2 /* View controllers */,
+				C9647FB521AB6DCB005765C2 /* Views */,
+				C9647FB421AB6DBC005765C2 /* Models */,
+				C9647FB721AB6DD8005765C2 /* Extensions */,
+				C9EA90CF21ADF00600F87F66 /* RelativePathForScript.swift */,
+				C9647FB221AB6D93005765C2 /* Resources */,
 			);
 			path = Luade;
+			sourceTree = "<group>";
+		};
+		C9BC6D5621AB2A22006CB876 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC6D5A21AB2A22006CB876 /* ios_system.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9BC6D8A21AB3D42006CB876 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC6DF121AB3E56006CB876 /* ios_error.h */,
+				C9BC6D8F21AB3D62006CB876 /* lapi.c */,
+				C9BC6DA121AB3D64006CB876 /* lapi.h */,
+				C9BC6DB221AB3D67006CB876 /* lauxlib.c */,
+				C9BC6D9921AB3D63006CB876 /* lauxlib.h */,
+				C9BC6DB821AB3D69006CB876 /* lbaselib.c */,
+				C9BC6D8D21AB3D62006CB876 /* lbitlib.c */,
+				C9BC6DC821AB3D6C006CB876 /* lcode.c */,
+				C9BC6DBC21AB3D69006CB876 /* lcode.h */,
+				C9BC6D9D21AB3D64006CB876 /* lcorolib.c */,
+				C9BC6DB921AB3D69006CB876 /* lctype.c */,
+				C9BC6DB621AB3D68006CB876 /* lctype.h */,
+				C9BC6DC521AB3D6B006CB876 /* ldblib.c */,
+				C9BC6DC121AB3D6A006CB876 /* ldebug.c */,
+				C9BC6D8C21AB3D62006CB876 /* ldebug.h */,
+				C9BC6DC921AB3D6C006CB876 /* ldo.c */,
+				C9BC6DB321AB3D67006CB876 /* ldo.h */,
+				C9BC6DB721AB3D68006CB876 /* ldump.c */,
+				C9BC6D9521AB3D63006CB876 /* lfunc.c */,
+				C9BC6DA421AB3D65006CB876 /* lfunc.h */,
+				C9BC6DAA21AB3D66006CB876 /* lgc.c */,
+				C9BC6DAF21AB3D66006CB876 /* lgc.h */,
+				C9BC6DBD21AB3D6A006CB876 /* linit.c */,
+				C9BC6D8E21AB3D62006CB876 /* liolib.c */,
+				C9BC6DC421AB3D6B006CB876 /* ljumptab.h */,
+				C9BC6DA721AB3D65006CB876 /* llex.c */,
+				C9BC6D9621AB3D63006CB876 /* llex.h */,
+				C9BC6D9121AB3D62006CB876 /* llimits.h */,
+				C9BC6DC721AB3D6C006CB876 /* lmathlib.c */,
+				C9BC6DB021AB3D67006CB876 /* lmem.c */,
+				C9BC6D9E21AB3D64006CB876 /* lmem.h */,
+				C9BC6DAE21AB3D66006CB876 /* loadlib.c */,
+				C9BC6DB121AB3D67006CB876 /* lobject.c */,
+				C9BC6DA621AB3D65006CB876 /* lobject.h */,
+				C9BC6DBE21AB3D6A006CB876 /* lopcodes.c */,
+				C9BC6D9721AB3D63006CB876 /* lopcodes.h */,
+				C9BC6D9221AB3D62006CB876 /* loslib.c */,
+				C9BC6DA921AB3D66006CB876 /* lparser.c */,
+				C9BC6DBF21AB3D6A006CB876 /* lparser.h */,
+				C9BC6D9021AB3D62006CB876 /* lprefix.h */,
+				C9BC6DA221AB3D65006CB876 /* lstate.c */,
+				C9BC6D9A21AB3D63006CB876 /* lstate.h */,
+				C9BC6D9F21AB3D64006CB876 /* lstring.c */,
+				C9BC6DAD21AB3D66006CB876 /* lstring.h */,
+				C9BC6DBA21AB3D69006CB876 /* lstrlib.c */,
+				C9BC6DBB21AB3D69006CB876 /* ltable.c */,
+				C9BC6DA821AB3D65006CB876 /* ltable.h */,
+				C9BC6D9421AB3D63006CB876 /* ltablib.c */,
+				C9BC6DC021AB3D6A006CB876 /* ltests.c */,
+				C9BC6D9B21AB3D64006CB876 /* ltests.h */,
+				C9BC6DB421AB3D68006CB876 /* ltm.c */,
+				C9BC6DA521AB3D65006CB876 /* ltm.h */,
+				C9BC6D9321AB3D63006CB876 /* lua.c */,
+				C9BC6DC221AB3D6B006CB876 /* lua.h */,
+				C9BC6DA321AB3D65006CB876 /* luaconf.h */,
+				C9BC6DAB21AB3D66006CB876 /* lualib.h */,
+				C9BC6DC621AB3D6B006CB876 /* lundump.c */,
+				C9BC6DAC21AB3D66006CB876 /* lundump.h */,
+				C9BC6D9821AB3D63006CB876 /* lutf8lib.c */,
+				C9BC6DA021AB3D64006CB876 /* lvm.c */,
+				C9BC6DC321AB3D6B006CB876 /* lvm.h */,
+				C9BC6D9C21AB3D64006CB876 /* lzio.c */,
+				C9BC6DB521AB3D68006CB876 /* lzio.h */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		C9BC6DF221AB3EE1006CB876 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC6DF321AB3EE1006CB876 /* ios_system.framework */,
+				BD4E40A86137E78995F777A0 /* Pods_Luade.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9EA90B321ADE5E700F87F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9A0966921AE134D00A03454 /* FloatingPanel.framework */,
+				C9A0966B21AE134D00A03454 /* InputAssistant.framework */,
+				C9EA90B921ADE5E800F87F66 /* Pods_Luade.framework */,
+				C9EA90BB21ADE5E800F87F66 /* SavannaKit.framework */,
+				C9EA90BD21ADE5E800F87F66 /* SourceEditor.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9EA90C821ADEBE900F87F66 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC6D4321AB2911006CB876 /* AppDelegate.swift */,
+				C9EA90C921ADEBF300F87F66 /* Lua.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,13 +471,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BC6D5221AB2913006CB876 /* Build configuration list for PBXNativeTarget "Luade" */;
 			buildPhases = (
+				6D59E2A80EC24BC71802B3B7 /* [CP] Check Pods Manifest.lock */,
 				C9BC6D3C21AB2911006CB876 /* Sources */,
 				C9BC6D3D21AB2911006CB876 /* Frameworks */,
 				C9BC6D3E21AB2911006CB876 /* Resources */,
+				C9BC6D6521AB2B1A006CB876 /* Embed Frameworks */,
+				69DDB60A8BE4C07A9BDB3F2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C9BC6DFC21AB4591006CB876 /* PBXTargetDependency */,
 			);
 			name = Luade;
 			productName = Luade;
@@ -96,6 +500,7 @@
 				TargetAttributes = {
 					C9BC6D3F21AB2911006CB876 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -110,6 +515,16 @@
 			mainGroup = C9BC6D3721AB2911006CB876;
 			productRefGroup = C9BC6D4121AB2911006CB876 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9BC6D5621AB2A22006CB876 /* Products */;
+					ProjectRef = C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */;
+				},
+				{
+					ProductGroup = C9EA90B321ADE5E700F87F66 /* Products */;
+					ProjectRef = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C9BC6D3F21AB2911006CB876 /* Luade */,
@@ -117,40 +532,193 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		C9A0966921AE134D00A03454 /* FloatingPanel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FloatingPanel.framework;
+			remoteRef = C9A0966821AE134D00A03454 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9A0966B21AE134D00A03454 /* InputAssistant.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = InputAssistant.framework;
+			remoteRef = C9A0966A21AE134D00A03454 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9BC6D5A21AB2A22006CB876 /* ios_system.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ios_system.framework;
+			remoteRef = C9BC6D5921AB2A22006CB876 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9EA90B921ADE5E800F87F66 /* Pods_Luade.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Luade.framework;
+			remoteRef = C9EA90B821ADE5E800F87F66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9EA90BB21ADE5E800F87F66 /* SavannaKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SavannaKit.framework;
+			remoteRef = C9EA90BA21ADE5E800F87F66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9EA90BD21ADE5E800F87F66 /* SourceEditor.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceEditor.framework;
+			remoteRef = C9EA90BC21ADE5E800F87F66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		C9BC6D3E21AB2911006CB876 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9BC6D4E21AB2913006CB876 /* LaunchScreen.storyboard in Resources */,
+				C9EA90AF21ADE29600F87F66 /* Localizable.strings in Resources */,
+				C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */,
 				C9BC6D4B21AB2913006CB876 /* Assets.xcassets in Resources */,
-				C9BC6D4921AB2911006CB876 /* Main.storyboard in Resources */,
+				C9BC6D6B21AB2E30006CB876 /* commandDictionary.plist in Resources */,
+				C9BC6DFF21AB4EFB006CB876 /* Untitled.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69DDB60A8BE4C07A9BDB3F2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Luade/Pods-Luade-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework",
+				"${BUILT_PRODUCTS_DIR}/InputAssistant/InputAssistant.framework",
+				"${BUILT_PRODUCTS_DIR}/SavannaKit/SavannaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SourceEditor/SourceEditor.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingPanel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputAssistant.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SavannaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SourceEditor.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Luade/Pods-Luade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D59E2A80EC24BC71802B3B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luade-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9BC6D3C21AB2911006CB876 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9BC6D4621AB2911006CB876 /* ViewController.swift in Sources */,
+				C9BC6DE121AB3D6C006CB876 /* lctype.c in Sources */,
+				C9BC6DD021AB3D6C006CB876 /* lfunc.c in Sources */,
+				C9BC6DDC21AB3D6C006CB876 /* lobject.c in Sources */,
+				C9BC6E0321AB5829006CB876 /* ConsoleTextView.swift in Sources */,
+				C9EA90CA21ADEBF300F87F66 /* Lua.swift in Sources */,
+				C9BC6DE621AB3D6C006CB876 /* ltests.c in Sources */,
+				C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */,
+				C9BC6DCD21AB3D6C006CB876 /* loslib.c in Sources */,
+				C9BC6DCE21AB3D6C006CB876 /* lua.c in Sources */,
+				C9EA90D021ADF00700F87F66 /* RelativePathForScript.swift in Sources */,
+				C9BC6E0521AB585D006CB876 /* UIWindow.swift in Sources */,
+				C9BC6DD821AB3D6C006CB876 /* lparser.c in Sources */,
+				C9EA90C721ADE8C700F87F66 /* lua_copyright.c in Sources */,
+				C9BC6DD121AB3D6C006CB876 /* lutf8lib.c in Sources */,
+				C9BC6DE021AB3D6C006CB876 /* lbaselib.c in Sources */,
+				C9BC6DCC21AB3D6C006CB876 /* lapi.c in Sources */,
+				C9BC6DE321AB3D6C006CB876 /* ltable.c in Sources */,
+				C9BC6E0721AB5A21006CB876 /* IO.swift in Sources */,
+				C9BC6DDA21AB3D6C006CB876 /* loadlib.c in Sources */,
+				C9EA90D821ADF3E200F87F66 /* LuaLexer.swift in Sources */,
+				C9BC6DE721AB3D6C006CB876 /* ldebug.c in Sources */,
+				C9BC6DD921AB3D6C006CB876 /* lgc.c in Sources */,
+				C9EA90D221ADF07F00F87F66 /* UITextView+currentWord.swift in Sources */,
+				C9BC6DD521AB3D6C006CB876 /* lvm.c in Sources */,
+				C9BC6DCB21AB3D6C006CB876 /* liolib.c in Sources */,
+				C9BC6DE221AB3D6C006CB876 /* lstrlib.c in Sources */,
+				C9BC6E0121AB5805006CB876 /* ConsoleViewController.swift in Sources */,
+				C9EA90C421ADE67C00F87F66 /* Localizable.swift in Sources */,
+				C9BC6DDB21AB3D6C006CB876 /* lmem.c in Sources */,
+				C9A23F0421AF14A600DA10D1 /* LuaDelegate.swift in Sources */,
+				C9BC6DE821AB3D6C006CB876 /* ldblib.c in Sources */,
+				C9BC6DE921AB3D6C006CB876 /* lundump.c in Sources */,
+				C9BC6DD221AB3D6C006CB876 /* lzio.c in Sources */,
+				C9BC6DE421AB3D6C006CB876 /* linit.c in Sources */,
+				C9BC6DD421AB3D6C006CB876 /* lstring.c in Sources */,
+				C9BC6DCF21AB3D6C006CB876 /* ltablib.c in Sources */,
+				C9BC6DEC21AB3D6C006CB876 /* ldo.c in Sources */,
+				C9EA90CC21ADECDD00F87F66 /* LuaDocument.swift in Sources */,
 				C9BC6D4421AB2911006CB876 /* AppDelegate.swift in Sources */,
+				C9BC6DD321AB3D6C006CB876 /* lcorolib.c in Sources */,
+				C9BC6DEA21AB3D6C006CB876 /* lmathlib.c in Sources */,
+				C9BC6DEB21AB3D6C006CB876 /* lcode.c in Sources */,
+				C9EA90AB21ADE25A00F87F66 /* DocumentBrowserViewController.swift in Sources */,
+				C9BC6DE521AB3D6C006CB876 /* lopcodes.c in Sources */,
+				C9BC6DDE21AB3D6C006CB876 /* ltm.c in Sources */,
+				C9BC6DDF21AB3D6C006CB876 /* ldump.c in Sources */,
+				C9BC6DDD21AB3D6C006CB876 /* lauxlib.c in Sources */,
+				C9EA90CE21ADED1300F87F66 /* EditorViewController.swift in Sources */,
+				C9BC6DD721AB3D6C006CB876 /* llex.c in Sources */,
+				C9EA90AD21ADE28A00F87F66 /* FileCollectionViewCell.swift in Sources */,
+				C9EA90D421ADF0A800F87F66 /* String.swift in Sources */,
+				C9BC6DCA21AB3D6C006CB876 /* lbitlib.c in Sources */,
+				C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */,
+				C9BC6DD621AB3D6C006CB876 /* lstate.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		C9BC6D4721AB2911006CB876 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9BC6D4821AB2911006CB876 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		C9BC6DFC21AB4591006CB876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_system;
+			targetProxy = C9BC6DFB21AB4591006CB876 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		C9BC6D4C21AB2913006CB876 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,8 +848,11 @@
 		};
 		C9BC6D5321AB2913006CB876 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70489BA28CB49B0B7A5DA68 /* Pods-Luade.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y96PL6G497;
 				INFOPLIST_FILE = Luade/Info.plist;
@@ -291,6 +862,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.marcela.ada.Luade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Luade/Luade-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +871,11 @@
 		};
 		C9BC6D5421AB2913006CB876 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAB930C80137560BA7C1F4A /* Pods-Luade.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y96PL6G497;
 				INFOPLIST_FILE = Luade/Info.plist;
@@ -309,6 +885,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.marcela.ada.Luade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Luade/Luade-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
