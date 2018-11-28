@@ -19,3 +19,7 @@ Features:
     - Full REPL
     - Use your own modules
 ```
+
+## Building
+
+`$ ./setup.sh` and then open Luade.xcworkspace.
