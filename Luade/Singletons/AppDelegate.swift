@@ -15,6 +15,7 @@ import ios_system
     var window: UIWindow?
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
+        
         UIMenuController.shared.menuItems = [
             UIMenuItem(title: Localizable.MenuItems.open, action: #selector(FileCollectionViewCell.open(_:))),
             UIMenuItem(title: Localizable.MenuItems.run, action: #selector(FileCollectionViewCell.run(_:))),
@@ -23,6 +24,8 @@ import ios_system
             UIMenuItem(title: Localizable.MenuItems.copy, action: #selector(FileCollectionViewCell.copyFile(_:))),
             UIMenuItem(title: Localizable.MenuItems.move, action: #selector(FileCollectionViewCell.move(_:)))
         ]
+        
+        window?.accessibilityIgnoresInvertColors = true
         
         initializeEnvironment()
     }
