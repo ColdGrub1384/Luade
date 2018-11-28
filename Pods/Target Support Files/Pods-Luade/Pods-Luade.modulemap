@@ -1,6 +1,0 @@
-framework module Pods_Luade {
-  umbrella header "Pods-Luade-umbrella.h"
-
-  export *
-  module * { export * }
-}
