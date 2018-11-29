@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93872C621B08D9500780FBE /* ReviewHelper.swift */; };
 		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
 		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
 		C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */; };
@@ -141,6 +142,7 @@
 /* Begin PBXFileReference section */
 		4CAB930C80137560BA7C1F4A /* Pods-Luade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luade.release.xcconfig"; path = "Pods/Target Support Files/Pods-Luade/Pods-Luade.release.xcconfig"; sourceTree = "<group>"; };
 		BD4E40A86137E78995F777A0 /* Pods_Luade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93872C621B08D9500780FBE /* ReviewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHelper.swift; sourceTree = "<group>"; };
 		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				C9BC6D4321AB2911006CB876 /* AppDelegate.swift */,
+				C93872C621B08D9500780FBE /* ReviewHelper.swift */,
 				C9EA90C921ADEBF300F87F66 /* Lua.swift */,
 			);
 			path = Singletons;
@@ -689,6 +692,7 @@
 				C9BC6DCF21AB3D6C006CB876 /* ltablib.c in Sources */,
 				C9BC6DEC21AB3D6C006CB876 /* ldo.c in Sources */,
 				C9EA90CC21ADECDD00F87F66 /* LuaDocument.swift in Sources */,
+				C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */,
 				C9BC6D4421AB2911006CB876 /* AppDelegate.swift in Sources */,
 				C9BC6DD321AB3D6C006CB876 /* lcorolib.c in Sources */,
 				C9BC6DEA21AB3D6C006CB876 /* lmathlib.c in Sources */,

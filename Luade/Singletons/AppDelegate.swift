@@ -28,6 +28,9 @@ import ios_system
         window?.accessibilityIgnoresInvertColors = true
         
         initializeEnvironment()
+        
+        ReviewHelper.shared.launches += 1
+        ReviewHelper.shared.requestReview()
     }
     
     func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
