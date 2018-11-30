@@ -6,6 +6,8 @@
 <b>Luade</b>
 </p>
 
+![Mockup](mockup.png)
+
 ![Icon](https://raw.githubusercontent.com/ColdGrub1384/Luade/master/Luade/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5%402x.png)
 
 # Luade
