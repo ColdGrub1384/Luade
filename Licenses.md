@@ -5,7 +5,7 @@
 - [InputAssistant](https://github.com/IMcD23/InputAssistant)
 - [ios_system](https://github.com/holzschu/ios_system)
 - [Lua](https://www.lua.org)
-- [SourceEditor](https://github.com/louisdh/source-editor)
+- [SourceEditor](https://github.com/ronaldmannak/source-editor) forked from https://github.com/louisdh/source-editor
 
 ## FloatingPanel
 
