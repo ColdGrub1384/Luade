@@ -272,6 +272,13 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
         stopObserver()
     }
     
+    override var keyCommands: [UIKeyCommand]? {
+        return [
+            UIKeyCommand(input: "n", modifierFlags: .command, action: #selector(create(_:)), discoverabilityTitle: Localizable.Creation.createScript),
+            UIKeyCommand(input: "n", modifierFlags: [.command, .shift], action: #selector(createFolder(_:)), discoverabilityTitle: Localizable.Creation.createFolder)
+        ]
+    }
+    
     // MARK: - State restoration
     
     override func encodeRestorableState(with coder: NSCoder) {

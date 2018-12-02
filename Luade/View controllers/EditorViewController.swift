@@ -177,6 +177,13 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
         }) // TODO: Anyway to to it without a timer?
     }
     
+    override var keyCommands: [UIKeyCommand]? {
+        return [
+            UIKeyCommand(input: "r", modifierFlags: .command, action: #selector(run), discoverabilityTitle: Localizable.MenuItems.run),
+            UIKeyCommand(input: "w", modifierFlags: .command, action: #selector(close))
+        ]
+    }
+    
     // MARK: - Actions
     
     /// Shares the current script.

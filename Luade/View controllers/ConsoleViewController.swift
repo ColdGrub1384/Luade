@@ -114,6 +114,12 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         }) // TODO: Anyway to to it without a timer?
     }
     
+    override var keyCommands: [UIKeyCommand]? {
+        return [
+            UIKeyCommand(input: "w", modifierFlags: .command, action: #selector(close))
+        ]
+    }
+    
     // MARK: - Keyboard
     
     @objc func keyboardWillShow(_ notification:Notification) {
