@@ -9,6 +9,7 @@
 import UIKit
 import ios_system
 
+/// The View controller for interacting for the REPL.
 class REPLConsoleViewController: ConsoleViewController {
     
     override func viewDidLoad() {
@@ -23,10 +24,10 @@ class REPLConsoleViewController: ConsoleViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        textView.text = ""
+        console = ""
+        
         Lua.shared.delegate = self
-        if !Lua.shared.isRunning {
-            textView.text = ""
-            Lua.shared.runREPL(withIO: IO.shared)
-        }
+        Lua.shared.runREPL(withIO: IO.shared)
     }
 }

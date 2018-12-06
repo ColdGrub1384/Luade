@@ -56,9 +56,7 @@ class Lua {
             self.setupIOS_SYSTEM(io: io)
             ios_setDirectoryURL(FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0])
             self.delegate?.luaWillStartREPL(self)
-            self.isRunning = true
             self.delegate?.lua(self, didExitWithCode: ios_system("lua"))
-            self.isRunning = false
         }
     }
     
