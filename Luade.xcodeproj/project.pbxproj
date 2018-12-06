@@ -57,6 +57,9 @@
 		C990246521B8B80400AA5370 /* lua_extensionContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */; };
 		C990246621B8B80700AA5370 /* sharesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7421B85F6000810DAE /* sharesheet.m */; };
 		C990246721B8B87100AA5370 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BC6D5A21AB2A22006CB876 /* ios_system.framework */; };
+		C990247821B992BE00AA5370 /* device.m in Sources */ = {isa = PBXBuildFile; fileRef = C990247021B992BE00AA5370 /* device.m */; };
+		C990247921B992BE00AA5370 /* device.m in Sources */ = {isa = PBXBuildFile; fileRef = C990247021B992BE00AA5370 /* device.m */; };
+		C990247A21B992BE00AA5370 /* device.m in Sources */ = {isa = PBXBuildFile; fileRef = C990247021B992BE00AA5370 /* device.m */; };
 		C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */; };
 		C9A23F0421AF14A600DA10D1 /* LuaDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */; };
 		C9BC6D4421AB2911006CB876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4321AB2911006CB876 /* AppDelegate.swift */; };
@@ -291,6 +294,8 @@
 		C990242C21B8A40200AA5370 /* commandDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = commandDictionary.plist; sourceTree = "<group>"; };
 		C990243621B8B79900AA5370 /* Lua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C990243921B8B79A00AA5370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C990246F21B992BE00AA5370 /* device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
+		C990247021B992BE00AA5370 /* device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = device.m; sourceTree = "<group>"; };
 		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
 		C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaDelegate.swift; sourceTree = "<group>"; };
 		C9BC6D4021AB2911006CB876 /* Luade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -515,6 +520,15 @@
 			path = Lua;
 			sourceTree = "<group>";
 		};
+		C990246E21B992BE00AA5370 /* device library */ = {
+			isa = PBXGroup;
+			children = (
+				C990246F21B992BE00AA5370 /* device.h */,
+				C990247021B992BE00AA5370 /* device.m */,
+			);
+			path = "device library";
+			sourceTree = "<group>";
+		};
 		C9BC6D3721AB2911006CB876 = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +559,7 @@
 				C9EC0F0D21B7379500810DAE /* Luade.entitlements */,
 				C9BC6D8A21AB3D42006CB876 /* lua */,
 				C98F343E21B88681009BE421 /* sharesheet library */,
+				C990246E21B992BE00AA5370 /* device library */,
 				C9EA90C521ADE8C700F87F66 /* lua_copyright.h */,
 				C9EA90C621ADE8C700F87F66 /* lua_copyright.c */,
 				C9EA90C821ADEBE900F87F66 /* Singletons */,
@@ -1015,6 +1030,7 @@
 				C990244F21B8B7F400AA5370 /* linit.c in Sources */,
 				C990245121B8B7F400AA5370 /* llex.c in Sources */,
 				C990244621B8B7F400AA5370 /* lcode.c in Sources */,
+				C990247A21B992BE00AA5370 /* device.m in Sources */,
 				C990244B21B8B7F400AA5370 /* ldo.c in Sources */,
 				C990245621B8B7F400AA5370 /* lopcodes.c in Sources */,
 				C990244C21B8B7F400AA5370 /* ldump.c in Sources */,
@@ -1083,6 +1099,7 @@
 				C9BC6DCA21AB3D6C006CB876 /* lbitlib.c in Sources */,
 				C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */,
 				C9BC6DD621AB3D6C006CB876 /* lstate.c in Sources */,
+				C990247821B992BE00AA5370 /* device.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,6 +1150,7 @@
 				C9EC0F5B21B74AC800810DAE /* linit.c in Sources */,
 				C9EC0F5E21B74AC800810DAE /* lmathlib.c in Sources */,
 				C9EC0F4521B7476700810DAE /* LuaDelegate.swift in Sources */,
+				C990247921B992BE00AA5370 /* device.m in Sources */,
 				C9EC0F2E21B73BB200810DAE /* EditorViewController.swift in Sources */,
 				C9EC0F6821B74AC800810DAE /* ltable.c in Sources */,
 				C9EC0F6021B74AC800810DAE /* loadlib.c in Sources */,
@@ -1191,6 +1209,7 @@
 		C990244021B8B79A00AA5370 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1219,6 +1238,7 @@
 		C990244121B8B79A00AA5370 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
