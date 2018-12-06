@@ -47,6 +47,16 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         textView.becomeFirstResponder()
     }
     
+    /// An extension context to pass.
+    var extensionContext_: NSExtensionContext?
+    
+    /// Completes the extension context.
+    @objc func cancel(_ sender: Any) {
+        dismiss(animated: true) {
+            self.extensionContext_?.completeRequest(returningItems: nil, completionHandler: nil)
+        }
+    }
+    
     /// Closes the View controller or dismisses keyboard.
     @objc func close() {
         
@@ -80,7 +90,9 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         view.backgroundColor = .clear
         
         textView = ConsoleTextView()
+        #if MAINAPP
         textView.text = "\n"
+        #endif
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.delegate = self
         view.addSubview(textView)
@@ -190,7 +202,9 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
     
     func lua(_ lua: Lua, willStartScriptWithArguments arguments: [String]) {
         DispatchQueue.main.async {
+            #if MAINAPP
             self.textView.text = "\n"
+            #endif
             self.textView.becomeFirstResponder()
         }
     }

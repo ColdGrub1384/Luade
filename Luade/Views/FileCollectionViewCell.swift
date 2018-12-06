@@ -117,7 +117,7 @@ class FileCollectionViewCell: UICollectionViewCell, UIDocumentPickerDelegate, Sy
             } catch {
                 let alert = UIAlertController(title: Localizable.Errors.errorRemovingFile, message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: Localizable.ok, style: .cancel, handler: nil))
-                UIApplication.shared.keyWindow?.topViewController?.present(alert, animated: true, completion: nil)
+                window?.topViewController?.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -151,7 +151,7 @@ class FileCollectionViewCell: UICollectionViewCell, UIDocumentPickerDelegate, Sy
             } catch {
                 let alert = UIAlertController(title: Localizable.Errors.errorRenamingFile, message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: Localizable.ok, style: .cancel, handler: nil))
-                UIApplication.shared.keyWindow?.topViewController?.present(alert, animated: true, completion: nil)
+                self.window?.topViewController?.present(alert, animated: true, completion: nil)
             }
         }))
         alert.addAction(UIAlertAction(title: Localizable.cancel, style: .cancel, handler: nil))

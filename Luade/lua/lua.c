@@ -8,6 +8,7 @@
 
 #include "lprefix.h"
 
+#include "../sharesheet library/sharesheet.h"
 
 #include <signal.h>
 #include <stdio.h>
@@ -600,6 +601,7 @@ int lua_main (int argc, char **argv) {
     l_message(argv[0], "cannot create state: not enough memory");
     return EXIT_FAILURE;
   }
+  luaopen_sharesheet(L);
   lua_pushcfunction(L, &pmain);  /* to call 'pmain' in protected mode */
   lua_pushinteger(L, argc);  /* 1st argument */
   lua_pushlightuserdata(L, argv); /* 2nd argument */

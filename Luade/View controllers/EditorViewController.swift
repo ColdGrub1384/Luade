@@ -222,6 +222,8 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
     /// If the keyboard is shown, the keyboard is dissmiss and if not, the View controller is closed and the document is saved.
     @objc func close() {
         
+        let window = view.window
+        
         if textView.contentTextView.isFirstResponder {
             textView.contentTextView.resignFirstResponder()
         } else {
@@ -235,7 +237,7 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
                     if !success {
                         let alert = UIAlertController(title: Localizable.Errors.errorWrittingToScript, message: nil, preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: Localizable.ok, style: .cancel, handler: nil))
-                        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                        window?.topViewController?.present(alert, animated: true, completion: nil)
                     }
                     self.document?.close(completionHandler: { _ in
                         DocumentBrowserViewController.visible?.collectionView.reloadData()

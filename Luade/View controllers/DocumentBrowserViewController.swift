@@ -26,8 +26,10 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
     /// The Collection view displaying files.
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private static let defaultDirectory = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0]
+    
     /// The directory to show files.
-    var directory = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0] {
+    var directory = defaultDirectory {
         didSet {
             title = directory.lastPathComponent
             navigationItem.largeTitleDisplayMode = .never
@@ -57,7 +59,20 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
     }
     
     private var files: [URL] {
-        return (try? FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)) ?? []
+        let files = ((try? FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)) ?? [])
+        
+        #if MAINAPP
+        if directory == DocumentBrowserViewController.defaultDirectory {
+            return files+[sharedScriptsURL]
+        }
+        #endif
+        
+        return files
+    }
+    
+    /// Completes the extension context.
+    @IBAction func cancel(_ sender: Any) {
+        extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
     }
     
     /// Creates script.
@@ -98,12 +113,12 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
                 } else {
                     let alert = UIAlertController(title: Localizable.Errors.errorCreatingFile, message: nil, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: Localizable.ok, style: .cancel, handler: nil))
-                    UIApplication.shared.keyWindow?.topViewController?.present(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
             } catch {
                 let alert = UIAlertController(title: Localizable.Errors.errorCreatingFile, message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: Localizable.ok, style: .cancel, handler: nil))
-                UIApplication.shared.keyWindow?.topViewController?.present(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
             }
         }))
         alert.addAction(UIAlertAction(title: Localizable.cancel, style: .cancel, handler: nil))
@@ -142,7 +157,7 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
             } catch {
                 let alert = UIAlertController(title: Localizable.Creation.createFolder, message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: Localizable.create, style: .cancel, handler: nil))
-                UIApplication.shared.keyWindow?.topViewController?.present(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
             }
         }))
         alert.addAction(UIAlertAction(title: Localizable.cancel, style: .cancel, handler: nil))
@@ -198,6 +213,8 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
         }
         
         let doc = LuaDocument(fileURL: document)
+        
+        #if MAINAPP
         let editor = EditorViewController(document: doc)
         let navVC = UINavigationController(rootViewController: editor)
         navVC.navigationBar.barStyle = .black
@@ -210,14 +227,52 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
             }
             completion?()
         })
+        #else
+        
+        lua_extensionContext = extensionContext
+        
+        let console = ConsoleViewController()
+        console.loadViewIfNeeded()
+        let navVC = UINavigationController(rootViewController: console)
+        navVC.navigationBar.isTranslucent = false
+        navVC.navigationBar.barStyle = .black
+        navVC.modalPresentationStyle = .formSheet
+        navVC.modalTransitionStyle = .crossDissolve
+        
+        navigationController?.view.backgroundColor = .clear
+        
+        navigationController?.present(navVC, animated: true, completion: {
+            self.navigationController?.setViewControllers([], animated: true)
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            console.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: console, action: #selector(console.cancel(_:)))
+            console.view.backgroundColor = .black
+            console.extensionContext_ = self.extensionContext
+            
+            Lua.shared.delegate = console
+            Lua.shared.run(script: document.path, withIO: IO.shared)
+        })
+        #endif
     }
     
     /// The visible instance
     static var visible: DocumentBrowserViewController? {
+        #if MAINAPP
         return ((UIApplication.shared.keyWindow?.rootViewController as? UITabBarController)?.viewControllers?.first as? UINavigationController)?.visibleViewController as? DocumentBrowserViewController
+        #else
+        return nil
+        #endif
     }
     
     // MARK: - View controller
+    
+    override func loadView() {
+        #if !MAINAPP
+        directory = sharedScriptsURL
+        navigationItem.largeTitleDisplayMode = .always
+        #endif
+        
+        super.loadView()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -342,7 +397,11 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        #if MAINAPP
         return true
+        #else
+        return false
+        #endif
     }
     
     func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
@@ -450,7 +509,7 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
                 } catch {
                     let alert = UIAlertController(title: Localizable.Errors.errorMovingFile, message: error.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: Localizable.ok, style: .cancel, handler: nil))
-                    UIApplication.shared.keyWindow?.topViewController?.present(alert, animated: true, completion: nil)
+                    present(alert, animated: true, completion: nil)
                     break
                 }
             }

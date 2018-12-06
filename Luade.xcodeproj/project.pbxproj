@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7099F1185CAF33947B6E1759 /* Pods_Run_Lua_Script.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092469FD9334A0250030D849 /* Pods_Run_Lua_Script.framework */; };
 		C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93872C621B08D9500780FBE /* ReviewHelper.swift */; };
 		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
 		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
+		C98F343C21B87088009BE421 /* sharesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7421B85F6000810DAE /* sharesheet.m */; };
+		C98F343D21B8708D009BE421 /* lua_extensionContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */; };
+		C98F344021B88E57009BE421 /* Share Sheet Example.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F343F21B88E57009BE421 /* Share Sheet Example.lua */; };
+		C98F344221B897DA009BE421 /* Share Sheet README.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F344121B897DA009BE421 /* Share Sheet README.lua */; };
 		C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */; };
 		C9A23F0421AF14A600DA10D1 /* LuaDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */; };
 		C9BC6D4421AB2911006CB876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4321AB2911006CB876 /* AppDelegate.swift */; };
@@ -70,6 +75,66 @@
 		C9EA90D221ADF07F00F87F66 /* UITextView+currentWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D121ADF07F00F87F66 /* UITextView+currentWord.swift */; };
 		C9EA90D421ADF0A800F87F66 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D321ADF0A700F87F66 /* String.swift */; };
 		C9EA90D821ADF3E200F87F66 /* LuaLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D721ADF3E200F87F66 /* LuaLexer.swift */; };
+		C9EC0F1C21B73B6000810DAE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EC0F1A21B73B6000810DAE /* MainInterface.storyboard */; };
+		C9EC0F2021B73B6000810DAE /* Run Lua Script.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C9EC0F1621B73B6000810DAE /* Run Lua Script.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C9EC0F2A21B73B9100810DAE /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */; };
+		C9EC0F2B21B73BA500810DAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EA90AE21ADE29600F87F66 /* Localizable.strings */; };
+		C9EC0F2C21B73BAD00810DAE /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90C021ADE67C00F87F66 /* Localizable.swift */; };
+		C9EC0F2D21B73BAF00810DAE /* LuaDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90CB21ADECDD00F87F66 /* LuaDocument.swift */; };
+		C9EC0F2E21B73BB200810DAE /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90CD21ADED1300F87F66 /* EditorViewController.swift */; };
+		C9EC0F2F21B73BB500810DAE /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0021AB5804006CB876 /* ConsoleViewController.swift */; };
+		C9EC0F3921B73DE100810DAE /* Lua.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90C921ADEBF300F87F66 /* Lua.swift */; };
+		C9EC0F4221B746A000810DAE /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0421AB585D006CB876 /* UIWindow.swift */; };
+		C9EC0F4321B746A400810DAE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D321ADF0A700F87F66 /* String.swift */; };
+		C9EC0F4421B7475100810DAE /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0621AB5A21006CB876 /* IO.swift */; };
+		C9EC0F4521B7476700810DAE /* LuaDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */; };
+		C9EC0F4621B7476A00810DAE /* ConsolePanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */; };
+		C9EC0F4721B7476E00810DAE /* LuaLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D721ADF3E200F87F66 /* LuaLexer.swift */; };
+		C9EC0F4821B7479B00810DAE /* UITextView+currentWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90D121ADF07F00F87F66 /* UITextView+currentWord.swift */; };
+		C9EC0F4921B7479D00810DAE /* RelativePathForScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90CF21ADF00600F87F66 /* RelativePathForScript.swift */; };
+		C9EC0F4A21B747B900810DAE /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */; };
+		C9EC0F4B21B747BC00810DAE /* ConsoleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0221AB5829006CB876 /* ConsoleTextView.swift */; };
+		C9EC0F4C21B74A5B00810DAE /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BC6D5A21AB2A22006CB876 /* ios_system.framework */; };
+		C9EC0F4D21B74A7A00810DAE /* lua_copyright.c in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90C621ADE8C700F87F66 /* lua_copyright.c */; };
+		C9EC0F4E21B74AC800810DAE /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8F21AB3D62006CB876 /* lapi.c */; };
+		C9EC0F4F21B74AC800810DAE /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB221AB3D67006CB876 /* lauxlib.c */; };
+		C9EC0F5021B74AC800810DAE /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB821AB3D69006CB876 /* lbaselib.c */; };
+		C9EC0F5121B74AC800810DAE /* lbitlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8D21AB3D62006CB876 /* lbitlib.c */; };
+		C9EC0F5221B74AC800810DAE /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC821AB3D6C006CB876 /* lcode.c */; };
+		C9EC0F5321B74AC800810DAE /* lcorolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9D21AB3D64006CB876 /* lcorolib.c */; };
+		C9EC0F5421B74AC800810DAE /* lctype.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB921AB3D69006CB876 /* lctype.c */; };
+		C9EC0F5521B74AC800810DAE /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC521AB3D6B006CB876 /* ldblib.c */; };
+		C9EC0F5621B74AC800810DAE /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC121AB3D6A006CB876 /* ldebug.c */; };
+		C9EC0F5721B74AC800810DAE /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC921AB3D6C006CB876 /* ldo.c */; };
+		C9EC0F5821B74AC800810DAE /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB721AB3D68006CB876 /* ldump.c */; };
+		C9EC0F5921B74AC800810DAE /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9521AB3D63006CB876 /* lfunc.c */; };
+		C9EC0F5A21B74AC800810DAE /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DAA21AB3D66006CB876 /* lgc.c */; };
+		C9EC0F5B21B74AC800810DAE /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBD21AB3D6A006CB876 /* linit.c */; };
+		C9EC0F5C21B74AC800810DAE /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8E21AB3D62006CB876 /* liolib.c */; };
+		C9EC0F5D21B74AC800810DAE /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA721AB3D65006CB876 /* llex.c */; };
+		C9EC0F5E21B74AC800810DAE /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC721AB3D6C006CB876 /* lmathlib.c */; };
+		C9EC0F5F21B74AC800810DAE /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB021AB3D67006CB876 /* lmem.c */; };
+		C9EC0F6021B74AC800810DAE /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DAE21AB3D66006CB876 /* loadlib.c */; };
+		C9EC0F6121B74AC800810DAE /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB121AB3D67006CB876 /* lobject.c */; };
+		C9EC0F6221B74AC800810DAE /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBE21AB3D6A006CB876 /* lopcodes.c */; };
+		C9EC0F6321B74AC800810DAE /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9221AB3D62006CB876 /* loslib.c */; };
+		C9EC0F6421B74AC800810DAE /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA921AB3D66006CB876 /* lparser.c */; };
+		C9EC0F6521B74AC800810DAE /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA221AB3D65006CB876 /* lstate.c */; };
+		C9EC0F6621B74AC800810DAE /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9F21AB3D64006CB876 /* lstring.c */; };
+		C9EC0F6721B74AC800810DAE /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBA21AB3D69006CB876 /* lstrlib.c */; };
+		C9EC0F6821B74AC800810DAE /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DBB21AB3D69006CB876 /* ltable.c */; };
+		C9EC0F6921B74AC800810DAE /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9421AB3D63006CB876 /* ltablib.c */; };
+		C9EC0F6A21B74AC800810DAE /* ltests.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC021AB3D6A006CB876 /* ltests.c */; };
+		C9EC0F6B21B74AC800810DAE /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DB421AB3D68006CB876 /* ltm.c */; };
+		C9EC0F6C21B74AC800810DAE /* lua.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9321AB3D63006CB876 /* lua.c */; };
+		C9EC0F6D21B74AC800810DAE /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DC621AB3D6B006CB876 /* lundump.c */; };
+		C9EC0F6E21B74AC800810DAE /* lutf8lib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9821AB3D63006CB876 /* lutf8lib.c */; };
+		C9EC0F6F21B74AC800810DAE /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA021AB3D64006CB876 /* lvm.c */; };
+		C9EC0F7021B74AC800810DAE /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9C21AB3D64006CB876 /* lzio.c */; };
+		C9EC0F7121B74C4900810DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4321AB2911006CB876 /* AppDelegate.swift */; };
+		C9EC0F7321B8560400810DAE /* commandDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */; };
+		C9EC0F7521B85F6000810DAE /* sharesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7421B85F6000810DAE /* sharesheet.m */; };
+		C9EC0F7821B86E4200810DAE /* lua_extensionContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */; };
 		DC1F88E10FE5055CA5EAB5A4 /* Pods_Luade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4E40A86137E78995F777A0 /* Pods_Luade.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +188,20 @@
 			remoteGlobalIDString = EE81415DD4BC7D24A37E817C0246B0C1;
 			remoteInfo = SourceEditor;
 		};
+		C9EC0F1E21B73B6000810DAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BC6D3821AB2911006CB876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EC0F1521B73B6000810DAE;
+			remoteInfo = "Open With Lua";
+		};
+		C9EC0F4021B73DE100810DAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7365F4C1DC59608CE1A450182B1755D2;
+			remoteInfo = "Pods-Run Lua Script";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,14 +216,30 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9EC0F2921B73B6000810DAE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C9EC0F2021B73B6000810DAE /* Run Lua Script.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		092469FD9334A0250030D849 /* Pods_Run_Lua_Script.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Run_Lua_Script.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAB930C80137560BA7C1F4A /* Pods-Luade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luade.release.xcconfig"; path = "Pods/Target Support Files/Pods-Luade/Pods-Luade.release.xcconfig"; sourceTree = "<group>"; };
+		A6A7A24FFBFBE6ACCD8579D8 /* Pods-Run Lua Script.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Lua Script.release.xcconfig"; path = "Pods/Target Support Files/Pods-Run Lua Script/Pods-Run Lua Script.release.xcconfig"; sourceTree = "<group>"; };
+		B32772B42990131715C6839E /* Pods-Run Lua Script.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Lua Script.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Run Lua Script/Pods-Run Lua Script.debug.xcconfig"; sourceTree = "<group>"; };
 		BD4E40A86137E78995F777A0 /* Pods_Luade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93872C621B08D9500780FBE /* ReviewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHelper.swift; sourceTree = "<group>"; };
 		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C98F343F21B88E57009BE421 /* Share Sheet Example.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Share Sheet Example.lua"; sourceTree = "<group>"; };
+		C98F344121B897DA009BE421 /* Share Sheet README.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Share Sheet README.lua"; sourceTree = "<group>"; };
 		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
 		C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaDelegate.swift; sourceTree = "<group>"; };
 		C9BC6D4021AB2911006CB876 /* Luade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +333,15 @@
 		C9EA90D121ADF07F00F87F66 /* UITextView+currentWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+currentWord.swift"; sourceTree = "<group>"; };
 		C9EA90D321ADF0A700F87F66 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C9EA90D721ADF3E200F87F66 /* LuaLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaLexer.swift; sourceTree = "<group>"; };
+		C9EC0F0D21B7379500810DAE /* Luade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luade.entitlements; sourceTree = "<group>"; };
+		C9EC0F1621B73B6000810DAE /* Run Lua Script.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Run Lua Script.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EC0F1B21B73B6000810DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C9EC0F1D21B73B6000810DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9EC0F7221B8500800810DAE /* Run Lua Script.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Run Lua Script.entitlements"; sourceTree = "<group>"; };
+		C9EC0F7421B85F6000810DAE /* sharesheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sharesheet.m; sourceTree = "<group>"; };
+		C9EC0F7621B8697D00810DAE /* sharesheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sharesheet.h; sourceTree = "<group>"; };
+		C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = lua_extensionContext.mm; sourceTree = "<group>"; };
+		C9EC0F7921B86E8900810DAE /* lua_extensionContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lua_extensionContext.h; sourceTree = "<group>"; };
 		F70489BA28CB49B0B7A5DA68 /* Pods-Luade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Luade/Pods-Luade.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +355,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9EC0F1321B73B6000810DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC0F4C21B74A5B00810DAE /* ios_system.framework in Frameworks */,
+				7099F1185CAF33947B6E1759 /* Pods_Run_Lua_Script.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -259,6 +372,8 @@
 			children = (
 				F70489BA28CB49B0B7A5DA68 /* Pods-Luade.debug.xcconfig */,
 				4CAB930C80137560BA7C1F4A /* Pods-Luade.release.xcconfig */,
+				B32772B42990131715C6839E /* Pods-Run Lua Script.debug.xcconfig */,
+				A6A7A24FFBFBE6ACCD8579D8 /* Pods-Run Lua Script.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -272,6 +387,8 @@
 				C9BC6D4F21AB2913006CB876 /* Info.plist */,
 				C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */,
 				C9BC6DFE21AB4EFB006CB876 /* Untitled.lua */,
+				C98F343F21B88E57009BE421 /* Share Sheet Example.lua */,
+				C98F344121B897DA009BE421 /* Share Sheet README.lua */,
 				C9EA90AE21ADE29600F87F66 /* Localizable.strings */,
 			);
 			name = Resources;
@@ -320,12 +437,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C98F343E21B88681009BE421 /* sharesheet library */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC0F7621B8697D00810DAE /* sharesheet.h */,
+				C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */,
+				C9EC0F7921B86E8900810DAE /* lua_extensionContext.h */,
+				C9EC0F7421B85F6000810DAE /* sharesheet.m */,
+			);
+			path = "sharesheet library";
+			sourceTree = "<group>";
+		};
 		C9BC6D3721AB2911006CB876 = {
 			isa = PBXGroup;
 			children = (
 				C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */,
 				C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */,
 				C9BC6D4221AB2911006CB876 /* Luade */,
+				C9EC0F1721B73B6000810DAE /* Run Lua Script */,
 				C9BC6D4121AB2911006CB876 /* Products */,
 				C9BC6DF221AB3EE1006CB876 /* Frameworks */,
 				56DE6EE1FD34334449B256A2 /* Pods */,
@@ -336,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				C9BC6D4021AB2911006CB876 /* Luade.app */,
+				C9EC0F1621B73B6000810DAE /* Run Lua Script.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,8 +473,9 @@
 		C9BC6D4221AB2911006CB876 /* Luade */ = {
 			isa = PBXGroup;
 			children = (
+				C9EC0F0D21B7379500810DAE /* Luade.entitlements */,
 				C9BC6D8A21AB3D42006CB876 /* lua */,
-				C9BC6D8B21AB3D60006CB876 /* Luade-Bridging-Header.h */,
+				C98F343E21B88681009BE421 /* sharesheet library */,
 				C9EA90C521ADE8C700F87F66 /* lua_copyright.h */,
 				C9EA90C621ADE8C700F87F66 /* lua_copyright.c */,
 				C9EA90C821ADEBE900F87F66 /* Singletons */,
@@ -354,6 +485,7 @@
 				C9647FB721AB6DD8005765C2 /* Extensions */,
 				C9EA90CF21ADF00600F87F66 /* RelativePathForScript.swift */,
 				C9647FB221AB6D93005765C2 /* Resources */,
+				C9BC6D8B21AB3D60006CB876 /* Luade-Bridging-Header.h */,
 			);
 			path = Luade;
 			sourceTree = "<group>";
@@ -441,6 +573,7 @@
 			children = (
 				C9BC6DF321AB3EE1006CB876 /* ios_system.framework */,
 				BD4E40A86137E78995F777A0 /* Pods_Luade.framework */,
+				092469FD9334A0250030D849 /* Pods_Run_Lua_Script.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -451,6 +584,7 @@
 				C9A0966921AE134D00A03454 /* FloatingPanel.framework */,
 				C9A0966B21AE134D00A03454 /* InputAssistant.framework */,
 				C9EA90B921ADE5E800F87F66 /* Pods_Luade.framework */,
+				C9EC0F4121B73DE100810DAE /* Pods_Run_Lua_Script.framework */,
 				C9EA90BB21ADE5E800F87F66 /* SavannaKit.framework */,
 				C9EA90BD21ADE5E800F87F66 /* SourceEditor.framework */,
 			);
@@ -467,6 +601,16 @@
 			path = Singletons;
 			sourceTree = "<group>";
 		};
+		C9EC0F1721B73B6000810DAE /* Run Lua Script */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC0F7221B8500800810DAE /* Run Lua Script.entitlements */,
+				C9EC0F1A21B73B6000810DAE /* MainInterface.storyboard */,
+				C9EC0F1D21B73B6000810DAE /* Info.plist */,
+			);
+			path = "Run Lua Script";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -480,16 +624,36 @@
 				C9BC6D3E21AB2911006CB876 /* Resources */,
 				C9BC6D6521AB2B1A006CB876 /* Embed Frameworks */,
 				69DDB60A8BE4C07A9BDB3F2A /* [CP] Embed Pods Frameworks */,
+				C9EC0F2921B73B6000810DAE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				C9BC6DFC21AB4591006CB876 /* PBXTargetDependency */,
+				C9EC0F1F21B73B6000810DAE /* PBXTargetDependency */,
 			);
 			name = Luade;
 			productName = Luade;
 			productReference = C9BC6D4021AB2911006CB876 /* Luade.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C9EC0F1521B73B6000810DAE /* Run Lua Script */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EC0F2821B73B6000810DAE /* Build configuration list for PBXNativeTarget "Run Lua Script" */;
+			buildPhases = (
+				F7037D50E9ABDF4171B3DC0A /* [CP] Check Pods Manifest.lock */,
+				C9EC0F1221B73B6000810DAE /* Sources */,
+				C9EC0F1321B73B6000810DAE /* Frameworks */,
+				C9EC0F1421B73B6000810DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Run Lua Script";
+			productName = "Open With Lua";
+			productReference = C9EC0F1621B73B6000810DAE /* Run Lua Script.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -504,6 +668,19 @@
 					C9BC6D3F21AB2911006CB876 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					C9EC0F1521B73B6000810DAE = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -531,6 +708,7 @@
 			projectRoot = "";
 			targets = (
 				C9BC6D3F21AB2911006CB876 /* Luade */,
+				C9EC0F1521B73B6000810DAE /* Run Lua Script */,
 			);
 		};
 /* End PBXProject section */
@@ -578,6 +756,13 @@
 			remoteRef = C9EA90BC21ADE5E800F87F66 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C9EC0F4121B73DE100810DAE /* Pods_Run_Lua_Script.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Run_Lua_Script.framework;
+			remoteRef = C9EC0F4021B73DE100810DAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -585,12 +770,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98F344221B897DA009BE421 /* Share Sheet README.lua in Resources */,
 				C9BC6D4E21AB2913006CB876 /* LaunchScreen.storyboard in Resources */,
+				C98F344021B88E57009BE421 /* Share Sheet Example.lua in Resources */,
 				C9EA90AF21ADE29600F87F66 /* Localizable.strings in Resources */,
 				C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */,
 				C9BC6D4B21AB2913006CB876 /* Assets.xcassets in Resources */,
 				C9BC6D6B21AB2E30006CB876 /* commandDictionary.plist in Resources */,
 				C9BC6DFF21AB4EFB006CB876 /* Untitled.lua in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC0F1421B73B6000810DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC0F1C21B73B6000810DAE /* MainInterface.storyboard in Resources */,
+				C9EC0F7321B8560400810DAE /* commandDictionary.plist in Resources */,
+				C9EC0F2B21B73BA500810DAE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +844,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7037D50E9ABDF4171B3DC0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Run Lua Script-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -660,6 +879,7 @@
 				C9BC6E0321AB5829006CB876 /* ConsoleTextView.swift in Sources */,
 				C9EA90CA21ADEBF300F87F66 /* Lua.swift in Sources */,
 				C9BC6DE621AB3D6C006CB876 /* ltests.c in Sources */,
+				C9EC0F7821B86E4200810DAE /* lua_extensionContext.mm in Sources */,
 				C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */,
 				C9BC6DCD21AB3D6C006CB876 /* loslib.c in Sources */,
 				C9BC6DCE21AB3D6C006CB876 /* lua.c in Sources */,
@@ -681,6 +901,7 @@
 				C9BC6DCB21AB3D6C006CB876 /* liolib.c in Sources */,
 				C9BC6DE221AB3D6C006CB876 /* lstrlib.c in Sources */,
 				C9BC6E0121AB5805006CB876 /* ConsoleViewController.swift in Sources */,
+				C9EC0F7521B85F6000810DAE /* sharesheet.m in Sources */,
 				C9EA90C421ADE67C00F87F66 /* Localizable.swift in Sources */,
 				C9BC6DDB21AB3D6C006CB876 /* lmem.c in Sources */,
 				C9A23F0421AF14A600DA10D1 /* LuaDelegate.swift in Sources */,
@@ -712,6 +933,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9EC0F1221B73B6000810DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC0F7021B74AC800810DAE /* lzio.c in Sources */,
+				C9EC0F5921B74AC800810DAE /* lfunc.c in Sources */,
+				C9EC0F5421B74AC800810DAE /* lctype.c in Sources */,
+				C9EC0F4621B7476A00810DAE /* ConsolePanelLayout.swift in Sources */,
+				C9EC0F6B21B74AC800810DAE /* ltm.c in Sources */,
+				C9EC0F4B21B747BC00810DAE /* ConsoleTextView.swift in Sources */,
+				C9EC0F5121B74AC800810DAE /* lbitlib.c in Sources */,
+				C9EC0F2F21B73BB500810DAE /* ConsoleViewController.swift in Sources */,
+				C9EC0F4F21B74AC800810DAE /* lauxlib.c in Sources */,
+				C9EC0F6C21B74AC800810DAE /* lua.c in Sources */,
+				C9EC0F6421B74AC800810DAE /* lparser.c in Sources */,
+				C9EC0F2A21B73B9100810DAE /* DocumentBrowserViewController.swift in Sources */,
+				C9EC0F3921B73DE100810DAE /* Lua.swift in Sources */,
+				C9EC0F4421B7475100810DAE /* IO.swift in Sources */,
+				C9EC0F5F21B74AC800810DAE /* lmem.c in Sources */,
+				C9EC0F5721B74AC800810DAE /* ldo.c in Sources */,
+				C9EC0F6A21B74AC800810DAE /* ltests.c in Sources */,
+				C9EC0F4321B746A400810DAE /* String.swift in Sources */,
+				C98F343D21B8708D009BE421 /* lua_extensionContext.mm in Sources */,
+				C9EC0F6521B74AC800810DAE /* lstate.c in Sources */,
+				C9EC0F5321B74AC800810DAE /* lcorolib.c in Sources */,
+				C9EC0F6321B74AC800810DAE /* loslib.c in Sources */,
+				C9EC0F4921B7479D00810DAE /* RelativePathForScript.swift in Sources */,
+				C9EC0F6F21B74AC800810DAE /* lvm.c in Sources */,
+				C9EC0F4721B7476E00810DAE /* LuaLexer.swift in Sources */,
+				C9EC0F6621B74AC800810DAE /* lstring.c in Sources */,
+				C9EC0F2D21B73BAF00810DAE /* LuaDocument.swift in Sources */,
+				C9EC0F5021B74AC800810DAE /* lbaselib.c in Sources */,
+				C9EC0F4D21B74A7A00810DAE /* lua_copyright.c in Sources */,
+				C98F343C21B87088009BE421 /* sharesheet.m in Sources */,
+				C9EC0F5C21B74AC800810DAE /* liolib.c in Sources */,
+				C9EC0F5A21B74AC800810DAE /* lgc.c in Sources */,
+				C9EC0F5621B74AC800810DAE /* ldebug.c in Sources */,
+				C9EC0F5821B74AC800810DAE /* ldump.c in Sources */,
+				C9EC0F5221B74AC800810DAE /* lcode.c in Sources */,
+				C9EC0F2C21B73BAD00810DAE /* Localizable.swift in Sources */,
+				C9EC0F6221B74AC800810DAE /* lopcodes.c in Sources */,
+				C9EC0F6D21B74AC800810DAE /* lundump.c in Sources */,
+				C9EC0F6121B74AC800810DAE /* lobject.c in Sources */,
+				C9EC0F4821B7479B00810DAE /* UITextView+currentWord.swift in Sources */,
+				C9EC0F5B21B74AC800810DAE /* linit.c in Sources */,
+				C9EC0F5E21B74AC800810DAE /* lmathlib.c in Sources */,
+				C9EC0F4521B7476700810DAE /* LuaDelegate.swift in Sources */,
+				C9EC0F2E21B73BB200810DAE /* EditorViewController.swift in Sources */,
+				C9EC0F6821B74AC800810DAE /* ltable.c in Sources */,
+				C9EC0F6021B74AC800810DAE /* loadlib.c in Sources */,
+				C9EC0F5D21B74AC800810DAE /* llex.c in Sources */,
+				C9EC0F6721B74AC800810DAE /* lstrlib.c in Sources */,
+				C9EC0F4E21B74AC800810DAE /* lapi.c in Sources */,
+				C9EC0F4A21B747B900810DAE /* FileCollectionViewCell.swift in Sources */,
+				C9EC0F5521B74AC800810DAE /* ldblib.c in Sources */,
+				C9EC0F6921B74AC800810DAE /* ltablib.c in Sources */,
+				C9EC0F6E21B74AC800810DAE /* lutf8lib.c in Sources */,
+				C9EC0F4221B746A000810DAE /* UIWindow.swift in Sources */,
+				C9EC0F7121B74C4900810DAE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -719,6 +1002,11 @@
 			isa = PBXTargetDependency;
 			name = ios_system;
 			targetProxy = C9BC6DFB21AB4591006CB876 /* PBXContainerItemProxy */;
+		};
+		C9EC0F1F21B73B6000810DAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EC0F1521B73B6000810DAE /* Run Lua Script */;
+			targetProxy = C9EC0F1E21B73B6000810DAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -729,6 +1017,14 @@
 				C9BC6D4D21AB2913006CB876 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C9EC0F1A21B73B6000810DAE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9EC0F1B21B73B6000810DAE /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -856,16 +1152,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Luade/Luade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y96PL6G497;
 				INFOPLIST_FILE = Luade/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.marcela.ada.Luade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG MAINAPP";
 				SWIFT_OBJC_BRIDGING_HEADER = "Luade/Luade-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -879,16 +1180,73 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Luade/Luade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y96PL6G497;
 				INFOPLIST_FILE = Luade/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.marcela.ada.Luade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = MAINAPP;
+				SWIFT_OBJC_BRIDGING_HEADER = "Luade/Luade-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9EC0F2121B73B6000810DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B32772B42990131715C6839E /* Pods-Run Lua Script.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Run Lua Script/Run Lua Script.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y96PL6G497;
+				INFOPLIST_FILE = "$(SRCROOT)/Run Lua Script/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.marcela.ada.Luade.Open-With-Lua";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Luade/Luade-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9EC0F2221B73B6000810DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A7A24FFBFBE6ACCD8579D8 /* Pods-Run Lua Script.release.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Run Lua Script/Run Lua Script.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y96PL6G497;
+				INFOPLIST_FILE = "$(SRCROOT)/Run Lua Script/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.marcela.ada.Luade.Open-With-Lua";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Luade/Luade-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -912,6 +1270,15 @@
 			buildConfigurations = (
 				C9BC6D5321AB2913006CB876 /* Debug */,
 				C9BC6D5421AB2913006CB876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EC0F2821B73B6000810DAE /* Build configuration list for PBXNativeTarget "Run Lua Script" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC0F2121B73B6000810DAE /* Debug */,
+				C9EC0F2221B73B6000810DAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

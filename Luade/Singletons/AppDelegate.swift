@@ -9,6 +9,9 @@
 import UIKit
 import ios_system
 
+/// The URL for shared scripts URL.
+let sharedScriptsURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.luade.sharing")?.appendingPathComponent("Documents/Share Sheet") ?? FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0]
+
 /// The app's delegate
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -29,8 +32,48 @@ import ios_system
         
         initializeEnvironment()
         
+        #if MAINAPP
         ReviewHelper.shared.launches += 1
         ReviewHelper.shared.requestReview()
+        #endif
+        
+        if !FileManager.default.fileExists(atPath: sharedScriptsURL.path) {
+            do {
+                try FileManager.default.createDirectory(at: sharedScriptsURL, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        if let shareSheetExampleURL = Bundle.main.url(forResource: "Share Sheet Example", withExtension: "lua") {
+
+            let newShareSheetExampleURL = sharedScriptsURL.appendingPathComponent("Example.lua")
+            
+            do {
+                if FileManager.default.fileExists(atPath: newShareSheetExampleURL.path) {
+                    try FileManager.default.removeItem(at: newShareSheetExampleURL)
+                }
+                
+                try FileManager.default.copyItem(at: shareSheetExampleURL, to: newShareSheetExampleURL)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        if let shareSheetREADMEURL = Bundle.main.url(forResource: "Share Sheet README", withExtension: "lua") {
+            
+            let newShareSheetREADMEURL = sharedScriptsURL.appendingPathComponent("README.lua")
+            
+            do {
+                if FileManager.default.fileExists(atPath: newShareSheetREADMEURL.path) {
+                    try FileManager.default.removeItem(at: newShareSheetREADMEURL)
+                }
+                
+                try FileManager.default.copyItem(at: shareSheetREADMEURL, to: newShareSheetREADMEURL)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {

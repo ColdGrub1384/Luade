@@ -12,6 +12,17 @@ target 'Luade' do
   pod 'InputAssistant'
 end
 
+target 'Run Lua Script' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+
+    # Pods for Run Lua Script
+
+    pod 'SourceEditor', :git => 'https://github.com/ronaldmannak/source-editor.git'
+    pod 'FloatingPanel'
+    pod 'InputAssistant'
+end
+
 # post install
 post_install do |installer|
     # Build settings
