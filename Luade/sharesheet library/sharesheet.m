@@ -8,7 +8,7 @@
 
 #include "sharesheet.h"
 #include "lua_extensionContext.h"
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 static int sharesheet_string(lua_State *L) {
     
@@ -93,12 +93,69 @@ static int sharesheet_filePath(lua_State *L) {
     return 1;
 }
 
+static int sharesheet_shareItems(lua_State *L) {
+    
+    //#if MAINAPP
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    
+    int i;
+    for (i = 0; i < lua_gettop(L); i++) {
+        NSString *str = [NSString stringWithUTF8String: lua_tostring(L, i)];
+        
+        NSURL *url;
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:str isDirectory: nil]) {
+            url = [NSURL fileURLWithPath: str];
+        } else {
+            url = [NSURL URLWithString:str];
+        }
+        
+        if (url && url.scheme != nil && ![url.scheme isEqual: @""]) {
+            [items addObject: url];
+        } else {
+            [items addObject: str];
+        }
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        
+        UIViewController *topViewController = window.rootViewController;
+        while (true)
+        {
+            if (topViewController.presentedViewController) {
+                topViewController = topViewController.presentedViewController;
+            } else if ([topViewController isKindOfClass:[UINavigationController class]]) {
+                UINavigationController *nav = (UINavigationController *)topViewController;
+                topViewController = nav.topViewController;
+            } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
+                UITabBarController *tab = (UITabBarController *)topViewController;
+                topViewController = tab.selectedViewController;
+            } else {
+                break;
+            }
+        }
+        
+        vc.popoverPresentationController.sourceRect = topViewController.view.bounds;
+        vc.popoverPresentationController.sourceView = topViewController.view.window;
+        
+        [topViewController presentViewController:vc animated:YES completion:nil];
+    });
+    
+    return 0;
+    /*#else
+    return luaL_error(L, "'shareItems' should be only called from the app.");
+    #endif*/
+}
+
 static const struct luaL_Reg sharesheet_functions[] = {
     
-    { "string",   sharesheet_string    },
-    { "url",      sharesheet_url       },
-    { "filePath", sharesheet_filePath  },
-    { NULL,       NULL                 }
+    { "string",     sharesheet_string     },
+    { "url",        sharesheet_url        },
+    { "filePath",   sharesheet_filePath   },
+    { "shareItems", sharesheet_shareItems },
+    { NULL,         NULL                  }
 };
 
 int luaopen_sharesheet(lua_State *L) {
