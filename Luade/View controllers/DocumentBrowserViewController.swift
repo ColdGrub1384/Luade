@@ -171,10 +171,14 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
     @IBAction func help(_ sender: UIBarButtonItem) {
         let sheet = UIAlertController(title: "Luade", message: Lua.shared.version, preferredStyle: .actionSheet)
         
+        sheet.addAction(UIAlertAction(title: Localizable.Help.documentation, style: .default, handler: { _ in
+            let safari = SFSafariViewController(url: URL(string: "https://coldgrub1384.github.io/Luade")!)
+            self.present(safari, animated: true, completion: nil)
+        }))
         sheet.addAction(UIAlertAction(title: Localizable.Help.acknowledgments, style: .default, handler: { _ in
             let safari = SFSafariViewController(url: URL(string: "https://coldgrub1384.github.io/Luade/Licenses")!)
             self.present(safari, animated: true, completion: nil)
-         }))
+        }))
         sheet.addAction(UIAlertAction(title: Localizable.Help.sourceCode, style: .default, handler: { _ in
             let safari = SFSafariViewController(url: URL(string: "https://github.com/ColdGrub1384/Luade")!)
             self.present(safari, animated: true, completion: nil)

@@ -296,6 +296,9 @@
 		C990243921B8B79A00AA5370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C990246F21B992BE00AA5370 /* device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
 		C990247021B992BE00AA5370 /* device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = device.m; sourceTree = "<group>"; };
+		C990247C21B9A01000AA5370 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
+		C990247D21B9A10E00AA5370 /* Device.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Device.md; sourceTree = "<group>"; };
+		C990247E21B9A5F400AA5370 /* ShareSheet.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ShareSheet.md; sourceTree = "<group>"; };
 		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
 		C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaDelegate.swift; sourceTree = "<group>"; };
 		C9BC6D4021AB2911006CB876 /* Luade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -529,11 +532,22 @@
 			path = "device library";
 			sourceTree = "<group>";
 		};
+		C990247B21B9A00200AA5370 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				C990247C21B9A01000AA5370 /* index.md */,
+				C990247D21B9A10E00AA5370 /* Device.md */,
+				C990247E21B9A5F400AA5370 /* ShareSheet.md */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
 		C9BC6D3721AB2911006CB876 = {
 			isa = PBXGroup;
 			children = (
 				C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */,
 				C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */,
+				C990247B21B9A00200AA5370 /* docs */,
 				C9BC6D4221AB2911006CB876 /* Luade */,
 				C9EC0F1721B73B6000810DAE /* Run Lua Script */,
 				C990243721B8B79A00AA5370 /* Lua */,
