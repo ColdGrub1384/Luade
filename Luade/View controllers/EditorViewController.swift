@@ -184,6 +184,14 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
         ]
     }
     
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        
+        if viewControllerToPresent is UIActivityViewController {
+            viewControllerToPresent.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItems?.last
+        }
+        navigationController?.present(viewControllerToPresent, animated: flag, completion: completion)
+    }
+    
     // MARK: - Actions
     
     /// Shares the current script.

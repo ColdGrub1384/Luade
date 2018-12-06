@@ -98,8 +98,8 @@ static int sharesheet_shareItems(lua_State *L) {
     //#if MAINAPP
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
-    int i;
-    for (i = 0; i < lua_gettop(L); i++) {
+    int argc = lua_gettop(L);
+    for (int i = 1; i <= argc; i++) {
         NSString *str = [NSString stringWithUTF8String: lua_tostring(L, i)];
         
         NSURL *url;
@@ -138,7 +138,7 @@ static int sharesheet_shareItems(lua_State *L) {
         }
         
         vc.popoverPresentationController.sourceRect = topViewController.view.bounds;
-        vc.popoverPresentationController.sourceView = topViewController.view.window;
+        vc.popoverPresentationController.sourceView = topViewController.view;
         
         [topViewController presentViewController:vc animated:YES completion:nil];
     });
