@@ -15,12 +15,12 @@
 		C98F343D21B8708D009BE421 /* lua_extensionContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */; };
 		C98F344021B88E57009BE421 /* Share Sheet Example.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F343F21B88E57009BE421 /* Share Sheet Example.lua */; };
 		C98F344221B897DA009BE421 /* Share Sheet README.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F344121B897DA009BE421 /* Share Sheet README.lua */; };
+		C990242D21B8A40200AA5370 /* commandDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C990242C21B8A40200AA5370 /* commandDictionary.plist */; };
 		C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */; };
 		C9A23F0421AF14A600DA10D1 /* LuaDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */; };
 		C9BC6D4421AB2911006CB876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4321AB2911006CB876 /* AppDelegate.swift */; };
 		C9BC6D4B21AB2913006CB876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D4A21AB2913006CB876 /* Assets.xcassets */; };
 		C9BC6D4E21AB2913006CB876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D4C21AB2913006CB876 /* LaunchScreen.storyboard */; };
-		C9BC6D6B21AB2E30006CB876 /* commandDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */; };
 		C9BC6DCA21AB3D6C006CB876 /* lbitlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8D21AB3D62006CB876 /* lbitlib.c */; };
 		C9BC6DCB21AB3D6C006CB876 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8E21AB3D62006CB876 /* liolib.c */; };
 		C9BC6DCC21AB3D6C006CB876 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D8F21AB3D62006CB876 /* lapi.c */; };
@@ -132,7 +132,6 @@
 		C9EC0F6F21B74AC800810DAE /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6DA021AB3D64006CB876 /* lvm.c */; };
 		C9EC0F7021B74AC800810DAE /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D9C21AB3D64006CB876 /* lzio.c */; };
 		C9EC0F7121B74C4900810DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6D4321AB2911006CB876 /* AppDelegate.swift */; };
-		C9EC0F7321B8560400810DAE /* commandDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */; };
 		C9EC0F7521B85F6000810DAE /* sharesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7421B85F6000810DAE /* sharesheet.m */; };
 		C9EC0F7821B86E4200810DAE /* lua_extensionContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9EC0F7721B86E4200810DAE /* lua_extensionContext.mm */; };
 		DC1F88E10FE5055CA5EAB5A4 /* Pods_Luade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4E40A86137E78995F777A0 /* Pods_Luade.framework */; };
@@ -240,6 +239,7 @@
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C98F343F21B88E57009BE421 /* Share Sheet Example.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Share Sheet Example.lua"; sourceTree = "<group>"; };
 		C98F344121B897DA009BE421 /* Share Sheet README.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Share Sheet README.lua"; sourceTree = "<group>"; };
+		C990242C21B8A40200AA5370 /* commandDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = commandDictionary.plist; sourceTree = "<group>"; };
 		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
 		C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaDelegate.swift; sourceTree = "<group>"; };
 		C9BC6D4021AB2911006CB876 /* Luade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,7 +248,6 @@
 		C9BC6D4D21AB2913006CB876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9BC6D4F21AB2913006CB876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ios_system.xcodeproj; path = ios_system/ios_system.xcodeproj; sourceTree = "<group>"; };
-		C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = commandDictionary.plist; sourceTree = "<group>"; };
 		C9BC6D8B21AB3D60006CB876 /* Luade-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Luade-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9BC6D8C21AB3D62006CB876 /* ldebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ldebug.h; sourceTree = "<group>"; };
 		C9BC6D8D21AB3D62006CB876 /* lbitlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbitlib.c; sourceTree = "<group>"; };
@@ -381,11 +380,11 @@
 		C9647FB221AB6D93005765C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C990242C21B8A40200AA5370 /* commandDictionary.plist */,
 				C9BC6D4A21AB2913006CB876 /* Assets.xcassets */,
 				C9647FB021AB6CC9005765C2 /* Main.storyboard */,
 				C9BC6D4C21AB2913006CB876 /* LaunchScreen.storyboard */,
 				C9BC6D4F21AB2913006CB876 /* Info.plist */,
-				C9BC6D6A21AB2E30006CB876 /* commandDictionary.plist */,
 				C9BC6DFE21AB4EFB006CB876 /* Untitled.lua */,
 				C98F343F21B88E57009BE421 /* Share Sheet Example.lua */,
 				C98F344121B897DA009BE421 /* Share Sheet README.lua */,
@@ -776,7 +775,7 @@
 				C9EA90AF21ADE29600F87F66 /* Localizable.strings in Resources */,
 				C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */,
 				C9BC6D4B21AB2913006CB876 /* Assets.xcassets in Resources */,
-				C9BC6D6B21AB2E30006CB876 /* commandDictionary.plist in Resources */,
+				C990242D21B8A40200AA5370 /* commandDictionary.plist in Resources */,
 				C9BC6DFF21AB4EFB006CB876 /* Untitled.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,7 +785,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9EC0F1C21B73B6000810DAE /* MainInterface.storyboard in Resources */,
-				C9EC0F7321B8560400810DAE /* commandDictionary.plist in Resources */,
 				C9EC0F2B21B73BA500810DAE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

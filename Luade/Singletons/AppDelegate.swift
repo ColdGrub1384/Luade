@@ -12,6 +12,11 @@ import ios_system
 /// The URL for shared scripts URL.
 let sharedScriptsURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.luade.sharing")?.appendingPathComponent("Documents/Share Sheet") ?? FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0]
 
+/// Wraps `lua_main`.
+@_cdecl("lua") public func lua(argc: Int32, argv: UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32 {
+    return lua_main(argc, argv)
+}
+
 /// The app's delegate
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -31,6 +36,7 @@ let sharedScriptsURL = FileManager.default.containerURL(forSecurityApplicationGr
         window?.accessibilityIgnoresInvertColors = true
         
         initializeEnvironment()
+        replaceCommand("lua", "lua", true)
         
         #if MAINAPP
         ReviewHelper.shared.launches += 1
