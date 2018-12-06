@@ -70,6 +70,9 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
         setTextViewContentInset()
         view.backgroundColor = textView.theme?.backgroundColor
         
+        textView.contentTextView.smartDashesType = .no
+        textView.contentTextView.smartQuotesType = .no
+        
         inputAssistant.dataSource = self
         inputAssistant.delegate = self
         inputAssistant.attach(to: textView.contentTextView)
