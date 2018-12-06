@@ -1,3 +1,4 @@
+An update will be released soon to fix "lua: command not found". I submitted the update. Sorry.
 
 <p align="center">
 <a href="https://github.com/ColdGrub1384/Pisth">Pisth</a> &bull;
