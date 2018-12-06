@@ -5,3 +5,4 @@
 #include "lua/lua.h"
 #include "lua_copyright.h"
 #import <Lua/lua_extensionContext.h>
+#import <Lua/lua_viewController.h>

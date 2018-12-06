@@ -71,6 +71,8 @@
 		C9BC6E0521AB585D006CB876 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0421AB585D006CB876 /* UIWindow.swift */; };
 		C9BC6E0721AB5A21006CB876 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC6E0621AB5A21006CB876 /* IO.swift */; };
 		C9C721A821B9BC2E003CDF36 /* Lua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C990243621B8B79900AA5370 /* Lua.framework */; };
+		C9C721AC21B9D228003CDF36 /* lua_viewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C721AB21B9D228003CDF36 /* lua_viewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9C721AD21B9D364003CDF36 /* lua_viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C721A921B9D204003CDF36 /* lua_viewController.m */; };
 		C9EA90AB21ADE25A00F87F66 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */; };
 		C9EA90AD21ADE28A00F87F66 /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */; };
 		C9EA90AF21ADE29600F87F66 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EA90AE21ADE29600F87F66 /* Localizable.strings */; };
@@ -304,6 +306,8 @@
 		C9BC6E0221AB5829006CB876 /* ConsoleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleTextView.swift; sourceTree = "<group>"; };
 		C9BC6E0421AB585D006CB876 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		C9BC6E0621AB5A21006CB876 /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		C9C721A921B9D204003CDF36 /* lua_viewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lua_viewController.m; sourceTree = "<group>"; };
+		C9C721AB21B9D228003CDF36 /* lua_viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_viewController.h; sourceTree = "<group>"; };
 		C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
 		C9EA90AE21ADE29600F87F66 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -436,9 +440,11 @@
 			isa = PBXGroup;
 			children = (
 				C9EC0F7621B8697D00810DAE /* sharesheet.h */,
+				C9EC0F7421B85F6000810DAE /* sharesheet.m */,
+				C9C721A921B9D204003CDF36 /* lua_viewController.m */,
+				C9C721AB21B9D228003CDF36 /* lua_viewController.h */,
 				C9EC0F7721B86E4200810DAE /* lua_extensionContext.m */,
 				C9EC0F7921B86E8900810DAE /* lua_extensionContext.h */,
-				C9EC0F7421B85F6000810DAE /* sharesheet.m */,
 			);
 			path = "sharesheet library";
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C721AC21B9D228003CDF36 /* lua_viewController.h in Headers */,
 				C990248121B9B98600AA5370 /* lua_extensionContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,6 +970,7 @@
 				C990245021B8B7F400AA5370 /* liolib.c in Sources */,
 				C990246321B8B7F400AA5370 /* lvm.c in Sources */,
 				C990246021B8B7F400AA5370 /* lua.c in Sources */,
+				C9C721AD21B9D364003CDF36 /* lua_viewController.m in Sources */,
 				C990246521B8B80400AA5370 /* lua_extensionContext.m in Sources */,
 				C990245E21B8B7F400AA5370 /* ltests.c in Sources */,
 				C990245B21B8B7F400AA5370 /* lstrlib.c in Sources */,
@@ -1077,6 +1085,7 @@
 		C990244021B8B79A00AA5370 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1108,6 +1117,7 @@
 		C990244121B8B79A00AA5370 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

@@ -8,6 +8,7 @@
 
 #include "sharesheet.h"
 #include "lua_extensionContext.h"
+#include "lua_viewController.h"
 #import <UIKit/UIKit.h>
 
 static int sharesheet_string(lua_State *L) {
@@ -119,28 +120,13 @@ static int sharesheet_shareItems(lua_State *L) {
     
     dispatch_async(dispatch_get_main_queue(), ^{
         UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
-        UIWindow *window = UIApplication.sharedApplication.keyWindow;
         
-        UIViewController *topViewController = window.rootViewController;
-        while (true)
-        {
-            if (topViewController.presentedViewController) {
-                topViewController = topViewController.presentedViewController;
-            } else if ([topViewController isKindOfClass:[UINavigationController class]]) {
-                UINavigationController *nav = (UINavigationController *)topViewController;
-                topViewController = nav.topViewController;
-            } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
-                UITabBarController *tab = (UITabBarController *)topViewController;
-                topViewController = tab.selectedViewController;
-            } else {
-                break;
-            }
+        if (lua_viewController) {
+            vc.popoverPresentationController.sourceRect = lua_viewController.view.bounds;
+            vc.popoverPresentationController.sourceView = lua_viewController.view;
+        
+            [lua_viewController presentViewController:vc animated:YES completion:nil];
         }
-        
-        vc.popoverPresentationController.sourceRect = topViewController.view.bounds;
-        vc.popoverPresentationController.sourceView = topViewController.view;
-        
-        [topViewController presentViewController:vc animated:YES completion:nil];
     });
     
     return 0;

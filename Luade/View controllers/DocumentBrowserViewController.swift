@@ -236,6 +236,7 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
         lua_extensionContext = extensionContext
         
         let console = ConsoleViewController()
+        lua_viewController = console
         console.loadViewIfNeeded()
         let navVC = UINavigationController(rootViewController: console)
         navVC.navigationBar.isTranslucent = false

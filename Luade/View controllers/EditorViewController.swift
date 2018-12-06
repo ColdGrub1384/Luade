@@ -208,6 +208,9 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
     @objc func run() {
         save { (_) in
             DispatchQueue.main.async {
+                
+                lua_viewController = self
+                
                 let console = ConsoleViewController()
                 if let url = self.document?.fileURL {
                     self.floatingPanel.set(contentViewController: console)

@@ -27,6 +27,7 @@ class REPLConsoleViewController: ConsoleViewController {
         textView.text = ""
         console = ""
         
+        lua_viewController = self
         Lua.shared.delegate = self
         Lua.shared.runREPL(withIO: IO.shared)
     }
