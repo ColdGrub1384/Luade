@@ -13,5 +13,6 @@ Returns a string passed to the script.
 Returns an URL passed to the script. (As a String)
 
 ## `filePath`
+`sharesheet.filePath()`
 
 Returns the path of a file passed to the script.
