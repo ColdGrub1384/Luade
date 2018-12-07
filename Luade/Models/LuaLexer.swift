@@ -23,7 +23,7 @@ class LuaLexer: SourceCodeRegexLexer {
         
         generators.append(regexGenerator("(?<=[^a-zA-Z])\\d+", tokenType: .number))
         
-        generators.append(regexGenerator("\\:\\w+", tokenType: .identifier))
+        generators.append(regexGenerator("\\.\\w+", tokenType: .identifier))
         
         generators.append(keywordGenerator(keywords, tokenType: .keyword))
         
@@ -31,7 +31,7 @@ class LuaLexer: SourceCodeRegexLexer {
         generators.append(regexGenerator("--(.*)", tokenType: .comment))
         
         // Block comment or multi-line string literal
-        generators.append(regexGenerator("(--[[.*--]])", options: [.dotMatchesLineSeparators], tokenType: .comment))
+        generators.append(regexGenerator("--[[.*--]])", options: [.dotMatchesLineSeparators], tokenType: .comment))
         
         // Single-line string literal
         generators.append(regexGenerator("('.*')|(\".*\")", tokenType: .string))
