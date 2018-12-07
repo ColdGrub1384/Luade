@@ -18,9 +18,12 @@ class Lua {
     
     private func setupIOS_SYSTEM(io: IO) {
         if ios_kill() == 0 {
-            delegate?.lua(self, didExitWithCode: -9)
+            delegate?.lua(self, didExitWithCode: 9)
         }
+        io.inputPipe = Pipe()
+        io.stdin = fdopen(io.inputPipe.fileHandleForReading.fileDescriptor, "r")
         stdin = io.stdin ?? stdin
+        
         ios_switchSession(io.stdout)
         ios_setStreams(io.stdin, io.stdout, io.stderr)
     }

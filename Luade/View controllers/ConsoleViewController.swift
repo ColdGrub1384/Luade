@@ -31,22 +31,6 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
     /// The floating panel in wich this View controller is embedded in.
     var floatingPanel: FloatingPanelController?
     
-    /// Requests the user for input.
-    ///
-    /// - Parameters:
-    ///     - prompt: The prompt from the Lua function
-    func input(prompt: String) {
-        
-        guard !ignoresInput else {
-            return
-        }
-        
-        textView.text += prompt
-        isAskingForInput = true
-        textView.isEditable = true
-        textView.becomeFirstResponder()
-    }
-    
     /// An extension context to pass.
     var extensionContext_: NSExtensionContext?
     

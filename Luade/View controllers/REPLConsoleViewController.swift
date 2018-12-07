@@ -12,6 +12,8 @@ import ios_system
 /// The View controller for interacting for the REPL.
 class REPLConsoleViewController: ConsoleViewController {
     
+    // MARK: - Console view controller
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,8 @@ class REPLConsoleViewController: ConsoleViewController {
         
         textView.text = ""
         console = ""
+        prompt = ""
+        isAskingForInput = false
         
         lua_viewController = self
         Lua.shared.delegate = self
