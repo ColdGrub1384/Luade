@@ -97,7 +97,7 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
         
         // Siri shortcut
         
-        if #available(iOS 12.0, *) {
+        if #available(iOS 12.0, *), document?.fileURL.path.hasPrefix(sharedScriptsURL.path) == false {
             let button = INUIAddVoiceShortcutButton(style: .blackOutline)
             
             navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
