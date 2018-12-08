@@ -22,7 +22,7 @@ Features:
     - Full REPL
     - Preinstalled modules to access device information and clipboard
     - Run scripts from the share sheet
-    - Use your own modules
+    - Store scripts in iCloud Drive
 ```
 
 ## Building
