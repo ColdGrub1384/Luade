@@ -102,9 +102,18 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
             }
             let script = self.directory.appendingPathComponent(filename).appendingPathExtension("lua")
             do {
-                guard let url = Bundle.main.url(forResource: "Untitled", withExtension: "lua") else {
+                let templateURL: URL?
+                
+                if !script.path.hasPrefix(sharedScriptsURL.path) {
+                    templateURL = Bundle.main.url(forResource: "Untitled", withExtension: "lua")
+                } else {
+                    templateURL = Bundle.main.url(forResource: "Untitled Share Sheet", withExtension: "lua")
+                }
+                
+                guard let url = templateURL else {
                     return
                 }
+                
                 if FileManager.default.createFile(atPath: script.path, contents: try Data(contentsOf: url), attributes: nil) {
                     var i = 0
                     for file in self.scripts { // For loop needed because the folder is not found with `Array.firstIndex(of:)`
