@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7099F1185CAF33947B6E1759 /* Pods_Run_Lua_Script.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092469FD9334A0250030D849 /* Pods_Run_Lua_Script.framework */; };
+		C93634B821BC419600785AC8 /* pasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C93634B521BC3CE100785AC8 /* pasteboard.m */; };
 		C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93872C621B08D9500780FBE /* ReviewHelper.swift */; };
 		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
 		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
@@ -215,6 +216,9 @@
 		A6A7A24FFBFBE6ACCD8579D8 /* Pods-Run Lua Script.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Lua Script.release.xcconfig"; path = "Pods/Target Support Files/Pods-Run Lua Script/Pods-Run Lua Script.release.xcconfig"; sourceTree = "<group>"; };
 		B32772B42990131715C6839E /* Pods-Run Lua Script.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Lua Script.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Run Lua Script/Pods-Run Lua Script.debug.xcconfig"; sourceTree = "<group>"; };
 		BD4E40A86137E78995F777A0 /* Pods_Luade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93634B521BC3CE100785AC8 /* pasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pasteboard.m; sourceTree = "<group>"; };
+		C93634B621BC3CE100785AC8 /* pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pasteboard.h; sourceTree = "<group>"; };
+		C93634B921BC487C00785AC8 /* Pasteboard.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Pasteboard.md; sourceTree = "<group>"; };
 		C93872C621B08D9500780FBE /* ReviewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHelper.swift; sourceTree = "<group>"; };
 		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -377,6 +381,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C93634AB21BC3C4800785AC8 /* pasteboard library */ = {
+			isa = PBXGroup;
+			children = (
+				C93634B621BC3CE100785AC8 /* pasteboard.h */,
+				C93634B521BC3CE100785AC8 /* pasteboard.m */,
+			);
+			path = "pasteboard library";
+			sourceTree = "<group>";
+		};
 		C9647FB221AB6D93005765C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +485,7 @@
 				C990247C21B9A01000AA5370 /* index.md */,
 				C990247D21B9A10E00AA5370 /* Device.md */,
 				C990247E21B9A5F400AA5370 /* ShareSheet.md */,
+				C93634B921BC487C00785AC8 /* Pasteboard.md */,
 			);
 			path = docs;
 			sourceTree = "<group>";
@@ -508,6 +522,7 @@
 				C9BC6D8A21AB3D42006CB876 /* lua */,
 				C98F343E21B88681009BE421 /* sharesheet library */,
 				C990246E21B992BE00AA5370 /* device library */,
+				C93634AB21BC3C4800785AC8 /* pasteboard library */,
 				C9EA90C521ADE8C700F87F66 /* lua_copyright.h */,
 				C9EA90C621ADE8C700F87F66 /* lua_copyright.c */,
 				C9EA90C821ADEBE900F87F66 /* Singletons */,
@@ -970,6 +985,7 @@
 				C990245021B8B7F400AA5370 /* liolib.c in Sources */,
 				C990246321B8B7F400AA5370 /* lvm.c in Sources */,
 				C990246021B8B7F400AA5370 /* lua.c in Sources */,
+				C93634B821BC419600785AC8 /* pasteboard.m in Sources */,
 				C9C721AD21B9D364003CDF36 /* lua_viewController.m in Sources */,
 				C990246521B8B80400AA5370 /* lua_extensionContext.m in Sources */,
 				C990245E21B8B7F400AA5370 /* ltests.c in Sources */,

@@ -20,6 +20,8 @@ Features:
 
     - Lua with all default libraries like "io"
     - Full REPL
+    - Preinstalled modules to access device information and clipboard
+    - Run scripts from the share sheet
     - Use your own modules
 ```
 

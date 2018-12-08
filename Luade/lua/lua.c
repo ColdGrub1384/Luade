@@ -10,6 +10,7 @@
 
 #include "../sharesheet library/sharesheet.h"
 #include "../device library/device.h"
+#include "../pasteboard library/pasteboard.h"
 
 #include <signal.h>
 #include <stdio.h>
@@ -604,6 +605,7 @@ int lua_main (int argc, char **argv) {
   }
   luaopen_sharesheet(L);
   luaopen_device(L);
+  luaopen_pasteboard(L);
   lua_pushcfunction(L, &pmain);  /* to call 'pmain' in protected mode */
   lua_pushinteger(L, argc);  /* 1st argument */
   lua_pushlightuserdata(L, argv); /* 2nd argument */
