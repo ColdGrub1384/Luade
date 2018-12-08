@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		7099F1185CAF33947B6E1759 /* Pods_Run_Lua_Script.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092469FD9334A0250030D849 /* Pods_Run_Lua_Script.framework */; };
 		C93634B821BC419600785AC8 /* pasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C93634B521BC3CE100785AC8 /* pasteboard.m */; };
+		C93634BB21BC4B8400785AC8 /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93634BA21BC4B8400785AC8 /* DocumentationViewController.swift */; };
+		C93634BD21BC4BCA00785AC8 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = C93634BC21BC4BCA00785AC8 /* docs */; };
+		C93634BE21BC4E1200785AC8 /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93634BA21BC4B8400785AC8 /* DocumentationViewController.swift */; };
+		C93634C021BC4FCE00785AC8 /* Help.lua in Resources */ = {isa = PBXBuildFile; fileRef = C93634BF21BC4FCE00785AC8 /* Help.lua */; };
+		C93634C121BC573F00785AC8 /* Share Sheet Example.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F343F21B88E57009BE421 /* Share Sheet Example.lua */; };
+		C93634C321BC582500785AC8 /* Samples in Resources */ = {isa = PBXBuildFile; fileRef = C93634C221BC582500785AC8 /* Samples */; };
 		C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93872C621B08D9500780FBE /* ReviewHelper.swift */; };
 		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
 		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
@@ -218,7 +224,10 @@
 		BD4E40A86137E78995F777A0 /* Pods_Luade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93634B521BC3CE100785AC8 /* pasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pasteboard.m; sourceTree = "<group>"; };
 		C93634B621BC3CE100785AC8 /* pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pasteboard.h; sourceTree = "<group>"; };
-		C93634B921BC487C00785AC8 /* Pasteboard.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Pasteboard.md; sourceTree = "<group>"; };
+		C93634BA21BC4B8400785AC8 /* DocumentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
+		C93634BC21BC4BCA00785AC8 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = SOURCE_ROOT; };
+		C93634BF21BC4FCE00785AC8 /* Help.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = Help.lua; sourceTree = "<group>"; };
+		C93634C221BC582500785AC8 /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Samples; sourceTree = "<group>"; };
 		C93872C621B08D9500780FBE /* ReviewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHelper.swift; sourceTree = "<group>"; };
 		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -229,9 +238,6 @@
 		C990243921B8B79A00AA5370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C990246F21B992BE00AA5370 /* device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
 		C990247021B992BE00AA5370 /* device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = device.m; sourceTree = "<group>"; };
-		C990247C21B9A01000AA5370 /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
-		C990247D21B9A10E00AA5370 /* Device.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Device.md; sourceTree = "<group>"; };
-		C990247E21B9A5F400AA5370 /* ShareSheet.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ShareSheet.md; sourceTree = "<group>"; };
 		C9A0966121AE134C00A03454 /* ConsolePanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolePanelLayout.swift; sourceTree = "<group>"; };
 		C9A23F0321AF14A600DA10D1 /* LuaDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuaDelegate.swift; sourceTree = "<group>"; };
 		C9BC6D4021AB2911006CB876 /* Luade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +399,7 @@
 		C9647FB221AB6D93005765C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C93634BC21BC4BCA00785AC8 /* docs */,
 				C990242C21B8A40200AA5370 /* commandDictionary.plist */,
 				C9BC6D4A21AB2913006CB876 /* Assets.xcassets */,
 				C9647FB021AB6CC9005765C2 /* Main.storyboard */,
@@ -401,6 +408,8 @@
 				C9BC6DFE21AB4EFB006CB876 /* Untitled.lua */,
 				C98F343F21B88E57009BE421 /* Share Sheet Example.lua */,
 				C98F344121B897DA009BE421 /* Share Sheet README.lua */,
+				C93634BF21BC4FCE00785AC8 /* Help.lua */,
+				C93634C221BC582500785AC8 /* Samples */,
 				C9EA90AE21ADE29600F87F66 /* Localizable.strings */,
 			);
 			name = Resources;
@@ -413,6 +422,7 @@
 				C9EA90CD21ADED1300F87F66 /* EditorViewController.swift */,
 				C9BC6E0021AB5804006CB876 /* ConsoleViewController.swift */,
 				C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */,
+				C93634BA21BC4B8400785AC8 /* DocumentationViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -479,23 +489,11 @@
 			path = "device library";
 			sourceTree = "<group>";
 		};
-		C990247B21B9A00200AA5370 /* docs */ = {
-			isa = PBXGroup;
-			children = (
-				C990247C21B9A01000AA5370 /* index.md */,
-				C990247D21B9A10E00AA5370 /* Device.md */,
-				C990247E21B9A5F400AA5370 /* ShareSheet.md */,
-				C93634B921BC487C00785AC8 /* Pasteboard.md */,
-			);
-			path = docs;
-			sourceTree = "<group>";
-		};
 		C9BC6D3721AB2911006CB876 = {
 			isa = PBXGroup;
 			children = (
 				C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */,
 				C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */,
-				C990247B21B9A00200AA5370 /* docs */,
 				C9BC6D4221AB2911006CB876 /* Luade */,
 				C9EC0F1721B73B6000810DAE /* Run Lua Script */,
 				C990243721B8B79A00AA5370 /* Lua */,
@@ -859,7 +857,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93634BD21BC4BCA00785AC8 /* docs in Resources */,
+				C93634C021BC4FCE00785AC8 /* Help.lua in Resources */,
 				C98F344221B897DA009BE421 /* Share Sheet README.lua in Resources */,
+				C93634C321BC582500785AC8 /* Samples in Resources */,
 				C9BC6D4E21AB2913006CB876 /* LaunchScreen.storyboard in Resources */,
 				C98F344021B88E57009BE421 /* Share Sheet Example.lua in Resources */,
 				C9EA90AF21ADE29600F87F66 /* Localizable.strings in Resources */,
@@ -877,6 +878,7 @@
 				C9EC0F1C21B73B6000810DAE /* MainInterface.storyboard in Resources */,
 				C990243021B8B62200AA5370 /* commandDictionary.plist in Resources */,
 				C9EC0F2B21B73BA500810DAE /* Localizable.strings in Resources */,
+				C93634C121BC573F00785AC8 /* Share Sheet Example.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,6 +1018,7 @@
 				C9EA90D021ADF00700F87F66 /* RelativePathForScript.swift in Sources */,
 				C9BC6E0521AB585D006CB876 /* UIWindow.swift in Sources */,
 				C9EA90C721ADE8C700F87F66 /* lua_copyright.c in Sources */,
+				C93634BB21BC4B8400785AC8 /* DocumentationViewController.swift in Sources */,
 				C9BC6E0721AB5A21006CB876 /* IO.swift in Sources */,
 				C9EA90D821ADF3E200F87F66 /* LuaLexer.swift in Sources */,
 				C9EA90D221ADF07F00F87F66 /* UITextView+currentWord.swift in Sources */,
@@ -1049,6 +1052,7 @@
 				C9EC0F2D21B73BAF00810DAE /* LuaDocument.swift in Sources */,
 				C9EC0F4D21B74A7A00810DAE /* lua_copyright.c in Sources */,
 				C9EC0F2C21B73BAD00810DAE /* Localizable.swift in Sources */,
+				C93634BE21BC4E1200785AC8 /* DocumentationViewController.swift in Sources */,
 				C9EC0F4821B7479B00810DAE /* UITextView+currentWord.swift in Sources */,
 				C9EC0F4521B7476700810DAE /* LuaDelegate.swift in Sources */,
 				C9EC0F2E21B73BB200810DAE /* EditorViewController.swift in Sources */,

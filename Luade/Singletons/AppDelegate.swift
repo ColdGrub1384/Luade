@@ -48,11 +48,12 @@ let sharedScriptsURL = FileManager.default.containerURL(forSecurityApplicationGr
             let newShareSheetExampleURL = sharedScriptsURL.appendingPathComponent("Example.lua")
             
             do {
-                if FileManager.default.fileExists(atPath: newShareSheetExampleURL.path) {
+                if FileManager.default.fileExists(atPath: newShareSheetExampleURL.path), let defaultData = (try? Data(contentsOf: shareSheetExampleURL)), let data = (try? Data(contentsOf: newShareSheetExampleURL)), defaultData == data  {
                     try FileManager.default.removeItem(at: newShareSheetExampleURL)
                 }
                 
-                try FileManager.default.copyItem(at: shareSheetExampleURL, to: newShareSheetExampleURL)
+                // try FileManager.default.copyItem(at: shareSheetExampleURL, to: newShareSheetExampleURL)
+                // Removed!
             } catch {
                 print(error.localizedDescription)
             }

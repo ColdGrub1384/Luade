@@ -67,6 +67,12 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
         }
         #endif
         
+        #if !MAINAPP
+        if directory.path == sharedScriptsURL.path, let exampleURL = Bundle.main.url(forResource: "Share Sheet Example", withExtension: "lua") {
+            return files+[exampleURL]
+        }
+        #endif
+        
         return files
     }
     
@@ -171,9 +177,27 @@ class DocumentBrowserViewController: UIViewController, UICollectionViewDataSourc
     @IBAction func help(_ sender: UIBarButtonItem) {
         let sheet = UIAlertController(title: "Luade", message: Lua.shared.version, preferredStyle: .actionSheet)
         
+        sheet.addAction(UIAlertAction(title: Localizable.Help.help, style: .default, handler: { _ in
+            if let helpURL = Bundle.main.url(forResource: "Help", withExtension: "lua") {
+                self.openDocument(helpURL, run: false)
+            }
+        }))
+        
+        sheet.addAction(UIAlertAction(title: Localizable.Help.samples, style: .default, handler: { _ in
+            if let url = Bundle.main.url(forResource: "Samples", withExtension: "") {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Browser") as? DocumentBrowserViewController else {
+                    return
+                }
+                vc.directory = url
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }))
+        
         sheet.addAction(UIAlertAction(title: Localizable.Help.documentation, style: .default, handler: { _ in
-            let safari = SFSafariViewController(url: URL(string: "https://coldgrub1384.github.io/Luade")!)
-            self.present(safari, animated: true, completion: nil)
+            let navVC = UINavigationController(rootViewController: DocumentationViewController())
+            navVC.navigationBar.barStyle = .black
+            navVC.toolbar.barStyle = .black
+            self.present(navVC, animated: true, completion: nil)
         }))
         sheet.addAction(UIAlertAction(title: Localizable.Help.acknowledgments, style: .default, handler: { _ in
             let safari = SFSafariViewController(url: URL(string: "https://coldgrub1384.github.io/Luade/Licenses")!)
