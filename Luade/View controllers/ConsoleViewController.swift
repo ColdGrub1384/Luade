@@ -52,6 +52,16 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         }
     }
     
+    /// Sets the Text view frame to fit.
+    func setTextViewFrame() {
+        textView.frame = view.safeAreaLayoutGuide.layoutFrame
+        
+        if navigationController == nil || navigationController?.visibleViewController != self {
+            textView.frame.size.height -= 20
+            textView.frame.origin.y += 20
+        }
+    }
+    
     deinit {        
         NotificationCenter.default.removeObserver(self)
     }
@@ -74,9 +84,7 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         view.backgroundColor = .clear
         
         textView = ConsoleTextView()
-        #if MAINAPP
-        textView.text = "\n"
-        #endif
+        textView.text = ""
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.delegate = self
         view.addSubview(textView)
@@ -89,7 +97,7 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         super.viewDidAppear(animated)
         
         IO.shared.console = self
-        textView.frame = view.safeAreaLayoutGuide.layoutFrame
+        setTextViewFrame()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -103,7 +111,7 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
         textView.resignFirstResponder()
         
         _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
-            self.textView.frame = self.view.safeAreaLayoutGuide.layoutFrame
+            self.setTextViewFrame()
             if wasFirstResponder {
                 self.textView.becomeFirstResponder()
             }
@@ -194,16 +202,14 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
     
     func lua(_ lua: Lua, willStartScriptWithArguments arguments: [String]) {
         DispatchQueue.main.async {
-            #if MAINAPP
-            self.textView.text = "\n"
-            #endif
+            self.textView.text = ""
             self.textView.becomeFirstResponder()
         }
     }
     
     func luaWillStartREPL(_ lua: Lua) {
         DispatchQueue.main.async {
-            self.textView.text = "\n"
+            self.textView.text = ""
             self.textView.becomeFirstResponder()
         }
     }

@@ -152,6 +152,7 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
         floatingPanel.delegate = self
         floatingPanel.surfaceView.backgroundColor = .black
         floatingPanel.addPanel(toParent: self)
+        floatingPanel.track(scrollView: console.textView)
         floatingPanel.move(to: .tip, animated: true)
         
         textView.frame = view.safeAreaLayoutGuide.layoutFrame
