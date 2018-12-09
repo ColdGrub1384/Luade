@@ -153,20 +153,7 @@ class ConsoleViewController: UIViewController, UITextViewDelegate, LuaDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-        var condition: Bool {
-            #if MAINAPP
-            return Lua.shared.isRunning || self is REPLConsoleViewController
-            #else
-            return Lua.shared.isRunning
-            #endif
-        }
-        
-        guard condition else {
-            textView.resignFirstResponder()
-            return false
-        }
-        
+                
         let location:Int = textView.offset(from: textView.beginningOfDocument, to: textView.endOfDocument)
         let length:Int = textView.offset(from: textView.endOfDocument, to: textView.endOfDocument)
         let end =  NSMakeRange(location, length)

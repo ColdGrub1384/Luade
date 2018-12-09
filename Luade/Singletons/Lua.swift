@@ -24,16 +24,24 @@ class Lua {
         io.stdin = fdopen(io.inputPipe.fileHandleForReading.fileDescriptor, "r")
         stdin = io.stdin ?? stdin
         
+        let handler = io.outputPipe.fileHandleForReading.readabilityHandler
+        io.outputPipe = Pipe()
+        io.errorPipe = Pipe()
+        io.outputPipe.fileHandleForReading.readabilityHandler = handler
+        io.errorPipe.fileHandleForReading.readabilityHandler = handler
+        
+        io.stdout = fdopen(io.outputPipe.fileHandleForWriting.fileDescriptor, "w")
+        io.stderr = fdopen(io.errorPipe.fileHandleForWriting.fileDescriptor, "w")
+        setbuf(io.stdout!, nil)
+        setbuf(io.stderr!, nil)
+        
         ios_switchSession(io.stdout)
         ios_setStreams(io.stdin, io.stdout, io.stderr)
     }
     
     /// The queue running Lua.
     let queue = DispatchQueue.global(qos: .userInteractive)
-    
-    /// Returns `true` if Lua is running.
-    private(set) var isRunning = false
-    
+        
     /// Runs the given script.
     ///
     /// - Parameters:
@@ -46,9 +54,7 @@ class Lua {
             putenv("LUA_PATH=\(directoryURL.path)/?.lua;".cValue)
             ios_setDirectoryURL(directoryURL)
             self.delegate?.lua(self, willStartScriptWithArguments: [script])
-            self.isRunning = true
             self.delegate?.lua(self, didExitWithCode: ios_system("lua '\(script)'"))
-            self.isRunning = false
         }
     }
     
