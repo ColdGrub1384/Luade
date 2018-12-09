@@ -31,9 +31,10 @@
         <scene sceneID="52Z-ay-OEN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rMa-Ab-Vd7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="REPL" image="fileIcon" selectedImage="fileIcon" id="dnI-2v-xAh"/>
+                    <tabBarItem key="tabBarItem" title="REPL" image="play" selectedImage="play" id="dnI-2v-xAh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="rPr-Na-jfW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -222,13 +223,14 @@
             </objects>
             <point key="canvasLocation" x="1996" y="765.96701649175418"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Scripts-->
         <scene sceneID="RbH-EZ-6wX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XKt-mA-1SH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="GWJ-4a-dZv"/>
+                    <tabBarItem key="tabBarItem" title="Scripts" image="fileIcon" selectedImage="fileIcon" id="GWJ-4a-dZv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="d4T-Mt-nwB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -244,8 +246,9 @@
     <resources>
         <image name="NewFolder_Normal" width="34" height="24"/>
         <image name="fileIcon" width="30" height="30"/>
+        <image name="play" width="30" height="30"/>
         <namedColor name="TintColor">
-            <color name="ibMissingResourceColor" catalog="#$assets-com.apple.dt.DVTKit" colorSpace="catalog"/>
+            <color red="0.396078431372549" green="0.80000000000000004" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
