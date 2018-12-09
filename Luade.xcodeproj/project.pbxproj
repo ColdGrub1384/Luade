@@ -18,6 +18,7 @@
 		C93634C521BC618700785AC8 /* Untitled Share Sheet.lua in Resources */ = {isa = PBXBuildFile; fileRef = C93634C421BC618700785AC8 /* Untitled Share Sheet.lua */; };
 		C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93872C621B08D9500780FBE /* ReviewHelper.swift */; };
 		C9466CBD21BD6E60002C95B0 /* TemplatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9466CBC21BD6E60002C95B0 /* TemplatesViewController.swift */; };
+		C9466CC821BD77B5002C95B0 /* openURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C9466CC421BD7786002C95B0 /* openURL.m */; };
 		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
 		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
 		C98F344021B88E57009BE421 /* Share Sheet Example.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F343F21B88E57009BE421 /* Share Sheet Example.lua */; };
@@ -233,6 +234,8 @@
 		C93634C421BC618700785AC8 /* Untitled Share Sheet.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Untitled Share Sheet.lua"; sourceTree = "<group>"; };
 		C93872C621B08D9500780FBE /* ReviewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHelper.swift; sourceTree = "<group>"; };
 		C9466CBC21BD6E60002C95B0 /* TemplatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesViewController.swift; sourceTree = "<group>"; };
+		C9466CC421BD7786002C95B0 /* openURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = openURL.m; sourceTree = "<group>"; };
+		C9466CC621BD7792002C95B0 /* openURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = openURL.h; sourceTree = "<group>"; };
 		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C98F343F21B88E57009BE421 /* Share Sheet Example.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Share Sheet Example.lua"; sourceTree = "<group>"; };
@@ -400,6 +403,15 @@
 			path = "pasteboard library";
 			sourceTree = "<group>";
 		};
+		C9466CC721BD7797002C95B0 /* openURL function */ = {
+			isa = PBXGroup;
+			children = (
+				C9466CC421BD7786002C95B0 /* openURL.m */,
+				C9466CC621BD7792002C95B0 /* openURL.h */,
+			);
+			path = "openURL function";
+			sourceTree = "<group>";
+		};
 		C9647FB221AB6D93005765C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +539,7 @@
 				C98F343E21B88681009BE421 /* sharesheet library */,
 				C990246E21B992BE00AA5370 /* device library */,
 				C93634AB21BC3C4800785AC8 /* pasteboard library */,
+				C9466CC721BD7797002C95B0 /* openURL function */,
 				C9EA90C521ADE8C700F87F66 /* lua_copyright.h */,
 				C9EA90C621ADE8C700F87F66 /* lua_copyright.c */,
 				C9EA90C821ADEBE900F87F66 /* Singletons */,
@@ -984,6 +997,7 @@
 				C990244521B8B7F400AA5370 /* lbitlib.c in Sources */,
 				C990246221B8B7F400AA5370 /* lutf8lib.c in Sources */,
 				C990244E21B8B7F400AA5370 /* lgc.c in Sources */,
+				C9466CC821BD77B5002C95B0 /* openURL.m in Sources */,
 				C990245221B8B7F400AA5370 /* lmathlib.c in Sources */,
 				C990245821B8B7F400AA5370 /* lparser.c in Sources */,
 				C990244921B8B7F400AA5370 /* ldblib.c in Sources */,
