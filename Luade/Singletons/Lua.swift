@@ -41,8 +41,10 @@ class Lua {
     ///     - io: The I/O stream to use.
     func run(script: String, withIO io: IO) {
         queue.async {
+            let directoryURL = URL(fileURLWithPath: script).deletingLastPathComponent()
             self.setupIOS_SYSTEM(io: io)
-            ios_setDirectoryURL(URL(fileURLWithPath: script).deletingLastPathComponent())
+            putenv("LUA_PATH=\(directoryURL.path)/?.lua;".cValue)
+            ios_setDirectoryURL(directoryURL)
             self.delegate?.lua(self, willStartScriptWithArguments: [script])
             self.isRunning = true
             self.delegate?.lua(self, didExitWithCode: ios_system("lua '\(script)'"))
@@ -57,7 +59,12 @@ class Lua {
     func runREPL(withIO io: IO) {
         queue.async {
             self.setupIOS_SYSTEM(io: io)
-            ios_setDirectoryURL(FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0])
+            ios_setDirectoryURL(DocumentBrowserViewController.localContainerURL)
+            if let iCloudDrive = DocumentBrowserViewController.iCloudContainerURL?.path {
+                putenv("LUA_PATH=\(DocumentBrowserViewController.localContainerURL.path)/?.lua;\(iCloudDrive)/?.lua".cValue)
+            } else {
+                putenv("LUA_PATH=\(DocumentBrowserViewController.localContainerURL.path)/?.lua".cValue)
+            }
             self.delegate?.luaWillStartREPL(self)
             self.delegate?.lua(self, didExitWithCode: ios_system("lua"))
         }
