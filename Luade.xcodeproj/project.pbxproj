@@ -17,6 +17,7 @@
 		C93634C321BC582500785AC8 /* Samples in Resources */ = {isa = PBXBuildFile; fileRef = C93634C221BC582500785AC8 /* Samples */; };
 		C93634C521BC618700785AC8 /* Untitled Share Sheet.lua in Resources */ = {isa = PBXBuildFile; fileRef = C93634C421BC618700785AC8 /* Untitled Share Sheet.lua */; };
 		C93872CC21B08D9500780FBE /* ReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93872C621B08D9500780FBE /* ReviewHelper.swift */; };
+		C9466CBD21BD6E60002C95B0 /* TemplatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9466CBC21BD6E60002C95B0 /* TemplatesViewController.swift */; };
 		C9647FAF21AB65C2005765C2 /* REPLConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */; };
 		C9647FB121AB6CC9005765C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9647FB021AB6CC9005765C2 /* Main.storyboard */; };
 		C98F344021B88E57009BE421 /* Share Sheet Example.lua in Resources */ = {isa = PBXBuildFile; fileRef = C98F343F21B88E57009BE421 /* Share Sheet Example.lua */; };
@@ -231,6 +232,7 @@
 		C93634C221BC582500785AC8 /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Samples; sourceTree = "<group>"; };
 		C93634C421BC618700785AC8 /* Untitled Share Sheet.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Untitled Share Sheet.lua"; sourceTree = "<group>"; };
 		C93872C621B08D9500780FBE /* ReviewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHelper.swift; sourceTree = "<group>"; };
+		C9466CBC21BD6E60002C95B0 /* TemplatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesViewController.swift; sourceTree = "<group>"; };
 		C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REPLConsoleViewController.swift; sourceTree = "<group>"; };
 		C9647FB021AB6CC9005765C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C98F343F21B88E57009BE421 /* Share Sheet Example.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Share Sheet Example.lua"; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				C9BC6E0021AB5804006CB876 /* ConsoleViewController.swift */,
 				C9647FAE21AB65C2005765C2 /* REPLConsoleViewController.swift */,
 				C93634BA21BC4B8400785AC8 /* DocumentationViewController.swift */,
+				C9466CBC21BD6E60002C95B0 /* TemplatesViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -1042,6 +1045,7 @@
 				C9EA90CE21ADED1300F87F66 /* EditorViewController.swift in Sources */,
 				C9EA90AD21ADE28A00F87F66 /* FileCollectionViewCell.swift in Sources */,
 				C9EA90D421ADF0A800F87F66 /* String.swift in Sources */,
+				C9466CBD21BD6E60002C95B0 /* TemplatesViewController.swift in Sources */,
 				C9A0966221AE134C00A03454 /* ConsolePanelLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
