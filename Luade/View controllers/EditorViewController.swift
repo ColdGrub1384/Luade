@@ -141,7 +141,6 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
             activity.persistentIdentifier = filePath
             attributes.relatedUniqueIdentifier = filePath
             attributes.identifier = filePath
-            attributes.domainIdentifier = filePath
             userActivity = activity
             if let path = filePath {
                 activity.addUserInfoEntries(from: ["filePath" : path])

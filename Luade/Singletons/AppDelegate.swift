@@ -126,7 +126,12 @@ let sharedScriptsURL = FileManager.default.containerURL(forSecurityApplicationGr
         func runScript() {
             if let path = userActivity.userInfo?["filePath"] as? String {
                 
-                let url = URL(fileURLWithPath: RelativePathForScript(URL(fileURLWithPath: path)).replacingFirstOccurrence(of: "iCloud/", with: (DocumentBrowserViewController.iCloudContainerURL?.path ?? DocumentBrowserViewController.localContainerURL.path)+"/"), relativeTo: FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first)
+                var url = URL(fileURLWithPath: RelativePathForScript(URL(fileURLWithPath: path)).replacingFirstOccurrence(of: "iCloud/", with: (DocumentBrowserViewController.iCloudContainerURL?.path ?? DocumentBrowserViewController.localContainerURL.path)+"/"), relativeTo: FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first)
+                
+                while !FileManager.default.fileExists(atPath: url.path), url.pathComponents.contains("iCloud") {
+                    
+                    url = URL(fileURLWithPath: url.path.replacingFirstOccurrence(of: "iCloud/", with: ""))
+                }
                 
                 if FileManager.default.fileExists(atPath: url.path) {
                     DocumentBrowserViewController.visible?.openDocument(url, run: true)
