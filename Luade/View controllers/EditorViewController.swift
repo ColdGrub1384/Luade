@@ -233,14 +233,16 @@ class EditorViewController: UIViewController, SyntaxTextViewDelegate, InputAssis
     
     /// Run the script represented by `document`.
     @objc func run() {
+        
+        let console = ConsoleViewController()
+        floatingPanel.set(contentViewController: console)
+        
         save { (_) in
             DispatchQueue.main.async {
                 
                 lua_viewController = self
                 
-                let console = ConsoleViewController()
                 if let url = self.document?.fileURL {
-                    self.floatingPanel.set(contentViewController: console)
                     self.floatingPanel.move(to: .full, animated: true)
                     Lua.shared.delegate = console
                     
