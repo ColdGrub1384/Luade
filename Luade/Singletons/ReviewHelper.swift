@@ -43,5 +43,5 @@ class ReviewHelper {
     }
     
     /// Minimum launches for asking for review.
-    var minLaunches = 10
+    var minLaunches = 3
 }
