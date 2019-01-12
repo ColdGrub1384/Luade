@@ -128,20 +128,6 @@
 			remoteGlobalIDString = C990243521B8B79900AA5370;
 			remoteInfo = Lua;
 		};
-		C9A0966821AE134D00A03454 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AEA115E90226A8EF5AC07DC59492C77D;
-			remoteInfo = FloatingPanel;
-		};
-		C9A0966A21AE134D00A03454 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 46F5536D008CB954DB43DF858C84A600;
-			remoteInfo = InputAssistant;
-		};
 		C9BC6D5921AB2A22006CB876 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */;
@@ -156,40 +142,12 @@
 			remoteGlobalIDString = 223496AA1FD5FC71007ED1A9;
 			remoteInfo = ios_system;
 		};
-		C9EA90B821ADE5E800F87F66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8EF36B1559613BF9D9C5F2B5B6C28FA8;
-			remoteInfo = "Pods-Luade";
-		};
-		C9EA90BA21ADE5E800F87F66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A70B6D2CAFFB796B348D4CACAB671A70;
-			remoteInfo = SavannaKit;
-		};
-		C9EA90BC21ADE5E800F87F66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE81415DD4BC7D24A37E817C0246B0C1;
-			remoteInfo = SourceEditor;
-		};
 		C9EC0F1E21B73B6000810DAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9BC6D3821AB2911006CB876 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C9EC0F1521B73B6000810DAE;
 			remoteInfo = "Open With Lua";
-		};
-		C9EC0F4021B73DE100810DAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7365F4C1DC59608CE1A450182B1755D2;
-			remoteInfo = "Pods-Run Lua Script";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -328,7 +286,6 @@
 		C9EA90AA21ADE25A00F87F66 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		C9EA90AC21ADE28A00F87F66 /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
 		C9EA90AE21ADE29600F87F66 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		C9EA90C021ADE67C00F87F66 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		C9EA90C521ADE8C700F87F66 /* lua_copyright.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lua_copyright.h; sourceTree = "<group>"; };
 		C9EA90C621ADE8C700F87F66 /* lua_copyright.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lua_copyright.c; sourceTree = "<group>"; };
@@ -510,7 +467,6 @@
 		C9BC6D3721AB2911006CB876 = {
 			isa = PBXGroup;
 			children = (
-				C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */,
 				C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */,
 				C9BC6D4221AB2911006CB876 /* Luade */,
 				C9EC0F1721B73B6000810DAE /* Run Lua Script */,
@@ -640,19 +596,6 @@
 				092469FD9334A0250030D849 /* Pods_Run_Lua_Script.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C9EA90B321ADE5E700F87F66 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C9A0966921AE134D00A03454 /* FloatingPanel.framework */,
-				C9A0966B21AE134D00A03454 /* InputAssistant.framework */,
-				C9EA90B921ADE5E800F87F66 /* Pods_Luade.framework */,
-				C9EC0F4121B73DE100810DAE /* Pods_Run_Lua_Script.framework */,
-				C9EA90BB21ADE5E800F87F66 /* SavannaKit.framework */,
-				C9EA90BD21ADE5E800F87F66 /* SourceEditor.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C9EA90C821ADEBE900F87F66 /* Singletons */ = {
@@ -804,10 +747,6 @@
 					ProductGroup = C9BC6D5621AB2A22006CB876 /* Products */;
 					ProjectRef = C9BC6D5521AB2A22006CB876 /* ios_system.xcodeproj */;
 				},
-				{
-					ProductGroup = C9EA90B321ADE5E700F87F66 /* Products */;
-					ProjectRef = C9EA90B221ADE5E700F87F66 /* Pods.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -819,53 +758,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C9A0966921AE134D00A03454 /* FloatingPanel.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FloatingPanel.framework;
-			remoteRef = C9A0966821AE134D00A03454 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C9A0966B21AE134D00A03454 /* InputAssistant.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = InputAssistant.framework;
-			remoteRef = C9A0966A21AE134D00A03454 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C9BC6D5A21AB2A22006CB876 /* ios_system.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ios_system.framework;
 			remoteRef = C9BC6D5921AB2A22006CB876 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C9EA90B921ADE5E800F87F66 /* Pods_Luade.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_Luade.framework;
-			remoteRef = C9EA90B821ADE5E800F87F66 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C9EA90BB21ADE5E800F87F66 /* SavannaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SavannaKit.framework;
-			remoteRef = C9EA90BA21ADE5E800F87F66 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C9EA90BD21ADE5E800F87F66 /* SourceEditor.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceEditor.framework;
-			remoteRef = C9EA90BC21ADE5E800F87F66 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C9EC0F4121B73DE100810DAE /* Pods_Run_Lua_Script.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_Run_Lua_Script.framework;
-			remoteRef = C9EC0F4021B73DE100810DAE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
